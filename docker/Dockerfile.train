@@ -1,0 +1,42 @@
+# Training image — the ONLY supported way to run training (no venv/bare-metal pod path).
+# Build & push once, then set it as the RunPod Container Image:
+#   docker buildx build --platform linux/amd64 -f docker/Dockerfile.train -t annaupreti/autosandbag-train:latest --push .
+#
+# Base image already ships Python 3.11 + torch 2.6.0 built for CUDA 12.4
+# (matches the working stack we pinned down: DTensor present, runs on the pod's 12.8 driver).
+FROM pytorch/pytorch:2.6.0-cuda12.4-cudnn9-runtime
+
+# Interactive tools + a C compiler. build-essential is REQUIRED: bitsandbytes' triton path
+# JIT-compiles a small CUDA helper at first use, and the -runtime base has no gcc, so LoRA
+# via peft (and QLoRA on 27B) crash with "Failed to find C compiler" without it.
+RUN apt-get update && apt-get install -y --no-install-recommends git nano tmux build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install deps EXPLICITLY and, critically, do NOT install `torch` here: the base image ships a
+# special CUDA-12.4 torch build, and reinstalling torch (e.g. `pip install -r requirements.txt`,
+# which lists an unpinned torch) replaces it with the default PyPI wheel and breaks CUDA / the
+# torch.distributed.tensor.DTensor import. This list mirrors requirements.txt MINUS torch — keep
+# the two in sync by hand (the one dep the base lacks and code needs is `openai`, plus the eval
+# harness). transformers is unpinned but works with the base torch 2.6.0 (DTensor lives in
+# torch.distributed.tensor there).
+RUN pip install --no-cache-dir \
+      transformers \
+      trl \
+      peft \
+      accelerate \
+      bitsandbytes \
+      wandb \
+      openai \
+      pyyaml \
+      tqdm \
+      inspect-ai \
+      inspect-evals
+
+# Keep the large HF model cache on the mounted /workspace volume, not baked into the image.
+ENV HF_HOME=/workspace/hf_cache
+WORKDIR /workspace
+
+# Code is intentionally NOT copied in — we `git clone` it at runtime so editing a script
+# never requires rebuilding the image. Secrets (HF_TOKEN, WANDB_API_KEY) are injected at
+# run time with `-e`, never baked into the image.
+CMD ["/bin/bash"]

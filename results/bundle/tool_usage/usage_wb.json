@@ -1,0 +1,592 @@
+{
+ "wb_clean_r5_run1__0830-1231": {
+  "turns": 90,
+  "output": 51378,
+  "input": 174,
+  "cache_read": 6109783,
+  "cache_write": 438811,
+  "total": 6600146,
+  "wall_min": 38.6,
+  "n_ts": 162
+ },
+ "wb_overt_run1__0829-1945": {
+  "turns": 69,
+  "output": 47456,
+  "input": 138,
+  "cache_read": 4094156,
+  "cache_write": 480248,
+  "total": 4621998,
+  "wall_min": 22.8,
+  "n_ts": 123
+ },
+ "wb_run10_run1__0828-0609": {
+  "turns": 125,
+  "output": 95909,
+  "input": 244,
+  "cache_read": 9865002,
+  "cache_write": 513585,
+  "total": 10474740,
+  "wall_min": 54.9,
+  "n_ts": 219
+ },
+ "wb_run10_run2__0828-0704": {
+  "turns": 115,
+  "output": 69457,
+  "input": 228,
+  "cache_read": 9773759,
+  "cache_write": 618041,
+  "total": 10461485,
+  "wall_min": 64.0,
+  "n_ts": 197
+ },
+ "wb_run10_run3__0828-0809": {
+  "turns": 105,
+  "output": 68154,
+  "input": 203,
+  "cache_read": 7467298,
+  "cache_write": 461261,
+  "total": 7996916,
+  "wall_min": 54.3,
+  "n_ts": 187
+ },
+ "wb_run10_run4__0828-0903": {
+  "turns": 155,
+  "output": 90483,
+  "input": 305,
+  "cache_read": 12037013,
+  "cache_write": 2522075,
+  "total": 14649876,
+  "wall_min": 117.2,
+  "n_ts": 277
+ },
+ "wb_run10_run5__0828-1104": {
+  "turns": 139,
+  "output": 78648,
+  "input": 272,
+  "cache_read": 11220488,
+  "cache_write": 519740,
+  "total": 11819148,
+  "wall_min": 51.4,
+  "n_ts": 243
+ },
+ "wb_run13_16k_run1__0829-1514": {
+  "turns": 132,
+  "output": 90125,
+  "input": 260,
+  "cache_read": 10387548,
+  "cache_write": 920466,
+  "total": 11398399,
+  "wall_min": 86.9,
+  "n_ts": 229
+ },
+ "wb_run13_16k_run2_INTERRUPTED_contractbug__0829-1642": {
+  "turns": 79,
+  "output": 47207,
+  "input": 141,
+  "cache_read": 4894490,
+  "cache_write": 211375,
+  "total": 5153213,
+  "wall_min": 35.6,
+  "n_ts": 148
+ },
+ "wb_run13_16k_run2__0829-1723": {
+  "turns": 5,
+  "output": 0,
+  "input": 0,
+  "cache_read": 0,
+  "cache_write": 0,
+  "total": 0,
+  "wall_min": 1.0,
+  "n_ts": 20
+ },
+ "wb_run13_16k_run3__0829-1835": {
+  "turns": 95,
+  "output": 51406,
+  "input": 190,
+  "cache_read": 6362890,
+  "cache_write": 191308,
+  "total": 6605794,
+  "wall_min": 53.9,
+  "n_ts": 170
+ },
+ "wb_run13_16k_run4__0829-2017": {
+  "turns": 119,
+  "output": 66449,
+  "input": 237,
+  "cache_read": 9215215,
+  "cache_write": 473725,
+  "total": 9755626,
+  "wall_min": 58.3,
+  "n_ts": 209
+ },
+ "wb_run13_r5_run5__0830-0940": {
+  "turns": 59,
+  "output": 42733,
+  "input": 111,
+  "cache_read": 3806357,
+  "cache_write": 128291,
+  "total": 3977492,
+  "wall_min": 13.7,
+  "n_ts": 104
+ },
+ "wb_run13_run1_ABORTED_deadendpoint__0829-1117": {
+  "turns": 43,
+  "output": 22583,
+  "input": 84,
+  "cache_read": 2163621,
+  "cache_write": 366741,
+  "total": 2553029,
+  "wall_min": 13.3,
+  "n_ts": 78
+ },
+ "wb_run13_run2__0829-1150": {
+  "turns": 135,
+  "output": 82589,
+  "input": 266,
+  "cache_read": 10288161,
+  "cache_write": 648926,
+  "total": 11019942,
+  "wall_min": 51.7,
+  "n_ts": 236
+ },
+ "wb_run13_run3__0829-1256": {
+  "turns": 117,
+  "output": 75430,
+  "input": 229,
+  "cache_read": 7823461,
+  "cache_write": 1266572,
+  "total": 9165692,
+  "wall_min": 72.2,
+  "n_ts": 208
+ },
+ "wb_run1_r5_run1__0830-1000": {
+  "turns": 151,
+  "output": 123607,
+  "input": 302,
+  "cache_read": 14333407,
+  "cache_write": 833127,
+  "total": 15290443,
+  "wall_min": 98.2,
+  "n_ts": 256
+ },
+ "wb_run1_r5_run2__0830-1139": {
+  "turns": 136,
+  "output": 66296,
+  "input": 268,
+  "cache_read": 10673264,
+  "cache_write": 264507,
+  "total": 11004335,
+  "wall_min": 66.2,
+  "n_ts": 238
+ },
+ "wb_run1_r5_run3__0830-1246": {
+  "turns": 124,
+  "output": 77646,
+  "input": 244,
+  "cache_read": 9669005,
+  "cache_write": 391164,
+  "total": 10138059,
+  "wall_min": 57.1,
+  "n_ts": 214
+ },
+ "wb_run1_r5_run4__0830-1343": {
+  "turns": 174,
+  "output": 115420,
+  "input": 342,
+  "cache_read": 16752073,
+  "cache_write": 1916154,
+  "total": 18783989,
+  "wall_min": 109.6,
+  "n_ts": 307
+ },
+ "wb_run1_r5_run5__0830-1534": {
+  "turns": 102,
+  "output": 50503,
+  "input": 200,
+  "cache_read": 6700961,
+  "cache_write": 124225,
+  "total": 6875889,
+  "wall_min": 27.3,
+  "n_ts": 177
+ },
+ "wb_run2_run1__0827-1719": {
+  "turns": 124,
+  "output": 73553,
+  "input": 244,
+  "cache_read": 8993912,
+  "cache_write": 439186,
+  "total": 9506895,
+  "wall_min": 59.0,
+  "n_ts": 219
+ },
+ "wb_run2_run2__0827-1819": {
+  "turns": 107,
+  "output": 88758,
+  "input": 212,
+  "cache_read": 8745834,
+  "cache_write": 468209,
+  "total": 9303013,
+  "wall_min": 57.1,
+  "n_ts": 189
+ },
+ "wb_run2_run3__0827-1916": {
+  "turns": 114,
+  "output": 69738,
+  "input": 221,
+  "cache_read": 7855099,
+  "cache_write": 809670,
+  "total": 8734728,
+  "wall_min": 74.0,
+  "n_ts": 199
+ },
+ "wb_run2_run4__0827-2031": {
+  "turns": 117,
+  "output": 82592,
+  "input": 231,
+  "cache_read": 8886861,
+  "cache_write": 436594,
+  "total": 9406278,
+  "wall_min": 55.1,
+  "n_ts": 203
+ },
+ "wb_run2_run5__0827-2127": {
+  "turns": 111,
+  "output": 95948,
+  "input": 216,
+  "cache_read": 9929776,
+  "cache_write": 254938,
+  "total": 10280878,
+  "wall_min": 33.5,
+  "n_ts": 193
+ },
+ "wb_run5_run1__0827-1759": {
+  "turns": 97,
+  "output": 57009,
+  "input": 192,
+  "cache_read": 6994903,
+  "cache_write": 154604,
+  "total": 7206708,
+  "wall_min": 31.4,
+  "n_ts": 172
+ },
+ "wb_run5_run2__0827-1830": {
+  "turns": 114,
+  "output": 108700,
+  "input": 221,
+  "cache_read": 9124088,
+  "cache_write": 508807,
+  "total": 9741816,
+  "wall_min": 58.7,
+  "n_ts": 198
+ },
+ "wb_run5_run3__0827-1930": {
+  "turns": 150,
+  "output": 76715,
+  "input": 300,
+  "cache_read": 12238409,
+  "cache_write": 1231867,
+  "total": 13547291,
+  "wall_min": 92.1,
+  "n_ts": 260
+ },
+ "wb_run5_run4__0828-0019": {
+  "turns": 94,
+  "output": 77070,
+  "input": 181,
+  "cache_read": 7037289,
+  "cache_write": 525509,
+  "total": 7640049,
+  "wall_min": 47.2,
+  "n_ts": 164
+ },
+ "wb_run5_run5__0828-0106": {
+  "turns": 118,
+  "output": 59363,
+  "input": 229,
+  "cache_read": 8119509,
+  "cache_write": 819299,
+  "total": 8998400,
+  "wall_min": 58.3,
+  "n_ts": 208
+ },
+ "wb_run6_run1__0827-1052": {
+  "turns": 150,
+  "output": 104117,
+  "input": 300,
+  "cache_read": 12112576,
+  "cache_write": 1128776,
+  "total": 13345769,
+  "wall_min": 61.0,
+  "n_ts": 264
+ },
+ "wb_run6_run2__0827-1222": {
+  "turns": 149,
+  "output": 96907,
+  "input": 298,
+  "cache_read": 12321265,
+  "cache_write": 579348,
+  "total": 12997818,
+  "wall_min": 60.7,
+  "n_ts": 257
+ },
+ "wb_run6_run3__0827-1323": {
+  "turns": 98,
+  "output": 113641,
+  "input": 196,
+  "cache_read": 8330398,
+  "cache_write": 245511,
+  "total": 8689746,
+  "wall_min": 29.7,
+  "n_ts": 176
+ },
+ "wb_run6_run4__0827-1353": {
+  "turns": 111,
+  "output": 82641,
+  "input": 216,
+  "cache_read": 8106030,
+  "cache_write": 1425470,
+  "total": 9614357,
+  "wall_min": 73.1,
+  "n_ts": 196
+ },
+ "wb_run6_run5__0827-1506": {
+  "turns": 107,
+  "output": 70119,
+  "input": 209,
+  "cache_read": 8803947,
+  "cache_write": 567147,
+  "total": 9441422,
+  "wall_min": 63.6,
+  "n_ts": 189
+ },
+ "wb_run7_run1__0828-0649": {
+  "turns": 111,
+  "output": 75109,
+  "input": 211,
+  "cache_read": 8337287,
+  "cache_write": 339845,
+  "total": 8752452,
+  "wall_min": 43.6,
+  "n_ts": 195
+ },
+ "wb_run7_run2__0828-0733": {
+  "turns": 80,
+  "output": 51006,
+  "input": 160,
+  "cache_read": 6032919,
+  "cache_write": 157944,
+  "total": 6242029,
+  "wall_min": 19.8,
+  "n_ts": 141
+ },
+ "wb_run7_run3__0828-0754": {
+  "turns": 93,
+  "output": 56152,
+  "input": 186,
+  "cache_read": 6670920,
+  "cache_write": 150252,
+  "total": 6877510,
+  "wall_min": 19.9,
+  "n_ts": 167
+ },
+ "wb_run7_run4__0828-0814": {
+  "turns": 107,
+  "output": 65984,
+  "input": 212,
+  "cache_read": 7369971,
+  "cache_write": 300143,
+  "total": 7736310,
+  "wall_min": 39.1,
+  "n_ts": 187
+ },
+ "wb_run7_run5__0828-0854": {
+  "turns": 96,
+  "output": 57859,
+  "input": 191,
+  "cache_read": 6684256,
+  "cache_write": 202019,
+  "total": 6944325,
+  "wall_min": 47.1,
+  "n_ts": 172
+ },
+ "wb_run8_16k_run1__0829-1514": {
+  "turns": 87,
+  "output": 46803,
+  "input": 172,
+  "cache_read": 5242425,
+  "cache_write": 812921,
+  "total": 6102321,
+  "wall_min": 50.2,
+  "n_ts": 156
+ },
+ "wb_run8_16k_run2_INTERRUPTED_contractbug__0829-1608": {
+  "turns": 92,
+  "output": 41388,
+  "input": 168,
+  "cache_read": 5542399,
+  "cache_write": 276167,
+  "total": 5860122,
+  "wall_min": 67.1,
+  "n_ts": 175
+ },
+ "wb_run8_16k_run2__0829-1723": {
+  "turns": 5,
+  "output": 0,
+  "input": 0,
+  "cache_read": 0,
+  "cache_write": 0,
+  "total": 0,
+  "wall_min": 1.0,
+  "n_ts": 20
+ },
+ "wb_run8_16k_run3__0829-1835": {
+  "turns": 89,
+  "output": 62961,
+  "input": 178,
+  "cache_read": 5913085,
+  "cache_write": 635234,
+  "total": 6611458,
+  "wall_min": 53.9,
+  "n_ts": 155
+ },
+ "wb_run8_16k_run4__0829-2024": {
+  "turns": 118,
+  "output": 64866,
+  "input": 232,
+  "cache_read": 8391882,
+  "cache_write": 466426,
+  "total": 8923406,
+  "wall_min": 68.1,
+  "n_ts": 207
+ },
+ "wb_run8_r5_run5__0830-0940": {
+  "turns": 97,
+  "output": 62047,
+  "input": 192,
+  "cache_read": 6368288,
+  "cache_write": 887406,
+  "total": 7317933,
+  "wall_min": 79.8,
+  "n_ts": 170
+ },
+ "wb_run8_r5_run6__0830-1100": {
+  "turns": 94,
+  "output": 60762,
+  "input": 186,
+  "cache_read": 6511514,
+  "cache_write": 134760,
+  "total": 6707222,
+  "wall_min": 35.7,
+  "n_ts": 166
+ },
+ "wb_run8_r5_run7__0830-1136": {
+  "turns": 113,
+  "output": 110935,
+  "input": 220,
+  "cache_read": 9696596,
+  "cache_write": 410532,
+  "total": 10218283,
+  "wall_min": 48.2,
+  "n_ts": 196
+ },
+ "wb_run8_r5_run8__0830-1326": {
+  "turns": 127,
+  "output": 88895,
+  "input": 254,
+  "cache_read": 9912596,
+  "cache_write": 1702253,
+  "total": 11703998,
+  "wall_min": 74.3,
+  "n_ts": 222
+ },
+ "wb_run8_run1_TIMEDOUT_novredict__0829-1100": {
+  "turns": 129,
+  "output": 65607,
+  "input": 255,
+  "cache_read": 9664002,
+  "cache_write": 809951,
+  "total": 10539815,
+  "wall_min": 106.2,
+  "n_ts": 224
+ },
+ "wb_run8_run2__0829-1310": {
+  "turns": 100,
+  "output": 55481,
+  "input": 195,
+  "cache_read": 6840370,
+  "cache_write": 347599,
+  "total": 7243645,
+  "wall_min": 44.6,
+  "n_ts": 174
+ },
+ "wb_run8_run3_ABORTED_8k_serve__0829-1406": {
+  "turns": 53,
+  "output": 36599,
+  "input": 104,
+  "cache_read": 3233421,
+  "cache_write": 102053,
+  "total": 3372177,
+  "wall_min": 16.3,
+  "n_ts": 96
+ },
+ "wb_run9_run1__0828-0354": {
+  "turns": 101,
+  "output": 85214,
+  "input": 195,
+  "cache_read": 8034398,
+  "cache_write": 331837,
+  "total": 8451644,
+  "wall_min": 39.8,
+  "n_ts": 179
+ },
+ "wb_run9_run2__0828-0434": {
+  "turns": 130,
+  "output": 123604,
+  "input": 247,
+  "cache_read": 12647802,
+  "cache_write": 735343,
+  "total": 13506996,
+  "wall_min": 51.6,
+  "n_ts": 223
+ },
+ "wb_run9_run3__0828-0526": {
+  "turns": 112,
+  "output": 82435,
+  "input": 217,
+  "cache_read": 8911846,
+  "cache_write": 173018,
+  "total": 9167516,
+  "wall_min": 29.8,
+  "n_ts": 195
+ },
+ "wb_run9_run4__0828-0556": {
+  "turns": 123,
+  "output": 153938,
+  "input": 234,
+  "cache_read": 11082055,
+  "cache_write": 280123,
+  "total": 11516350,
+  "wall_min": 25.8,
+  "n_ts": 216
+ },
+ "wb_run9_run5__0828-0623": {
+  "turns": 78,
+  "output": 50521,
+  "input": 149,
+  "cache_read": 5483526,
+  "cache_write": 143138,
+  "total": 5677334,
+  "wall_min": 22.3,
+  "n_ts": 138
+ },
+ "wb_s5_run17_run1__0827-1147": {
+  "turns": 67,
+  "output": 29256,
+  "input": 129,
+  "cache_read": 3746709,
+  "cache_write": 611888,
+  "total": 4387982,
+  "wall_min": 104.4,
+  "n_ts": 134
+ }
+}

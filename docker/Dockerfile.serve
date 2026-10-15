@@ -1,0 +1,36 @@
+# Serving + eval + white-box interpretability image — the ONLY supported way to serve/eval.
+# Build & push once, then set it as the RunPod Container Image:
+#   docker buildx build --platform linux/amd64 -f docker/Dockerfile.serve -t annaupreti/autosandbag-serve:latest --push .
+#
+# Based on the official vLLM server image, plus the tools we run evals with, so a
+# fresh pod is ready immediately — no more `apt-get install git` / `pip install
+# inspect-ai` every time. Deploy on RunPod and pass the model + LoRA modules as the
+# start command exactly like the stock vLLM template; the entrypoint (the vLLM API
+# server) is inherited from the base image.
+#
+# vllm-lens (UK AISI) is a vLLM PLUGIN (not a fork) that lets the blue team extract
+# residual-stream activations and apply steering vectors per request via extra_body.
+# It requires launching vLLM with its worker extension (see start command below).
+#
+# Example RunPod start command (args only — entrypoint prepends the server):
+#   Qwen/Qwen3-8B --enable-lora \
+#     --lora-modules organism_system=annaupreti/organism-system-qwen3-8b \
+#                    organism_user=annaupreti/organism-user-qwen3-8b \
+#     --max-lora-rank 16 --api-key EMPTY --host 0.0.0.0 --port 8000 \
+#     --worker-extension-cls vllm_lens.worker_extension.LensWorkerExtension
+#
+# Omit the --worker-extension-cls flag for a pure black-box (faster) serve.
+FROM vllm/vllm-openai:latest
+
+# git = clone the repo; tmux = long-running eval/serve sessions without losing the shell.
+# huggingface_hub is already in the vLLM image.
+RUN apt-get update && apt-get install -y --no-install-recommends git tmux \
+    && rm -rf /var/lib/apt/lists/*
+
+# Eval harness + the AISI benchmark suite (gsm8k, math, mmlu, arc, csqa, humaneval,
+# mbpp, ifeval, truthfulqa) + white-box plugin (activation extraction + steering) +
+# IFEval's official instruction scorer (used by archive/redteam/eval_cue_check.py --task ifeval).
+RUN pip install --no-cache-dir inspect-ai inspect-evals vllm-lens \
+      "instruction_following_eval @ git+https://github.com/josejg/instruction_following_eval.git"
+
+WORKDIR /workspace

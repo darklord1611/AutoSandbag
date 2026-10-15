@@ -1,0 +1,151 @@
+# Single image for the whole loop: vLLM serving + training + inspect evals + the blue-team
+# tool server, in ONE environment.
+# Build & push once, then set it as the RunPod Container Image:
+#   docker buildx build --platform linux/amd64 -f docker/Dockerfile.all \
+#     -t darklord1611/autosandbag-all:0.4 -t darklord1611/autosandbag-all:latest --push .
+#
+# Namespace is darklord1611, not the annaupreti one the README uses for the other two
+# images — that is simply whose Docker Hub credentials build this. Prefer the versioned tag
+# on a RunPod template so a rebuild never silently changes what a pod pulls.
+#
+# Adapted from green_team/docker/Dockerfile (the self_play_sandbagging reference image), with
+# that project's own machinery removed: the `sps` role dispatcher, the post_start RunPod
+# hook, verify_pins.py, and the /opt/venv indirection. Packages install straight into the
+# image's Python, matching Dockerfile.train and Dockerfile.serve.
+#
+# WHY ONE IMAGE. Two images mean train and serve cannot share a pod, so a round needs a
+# container swap in the middle. One image makes `train -> serve -> eval -> audit` a phase
+# sequence on a single pod, which is what makes an unattended round possible at all. It also
+# means blue_team/server.py sits next to vLLM by construction — required, not convenient, as
+# one residual-stream layer is ~25MB on a 27B and the reduction has to happen next to the
+# weights.
+#
+# Every pin below was validated end to end on a RunPod H200 (2026-07-18): serve ready in 90s,
+# a 5-step LoRA train, a gsm8k eval. The --no-deps sequences are load-bearing, not sloppiness
+# — pip's resolver refuses these combinations outright. See green_team/docker/README.md for the
+# full derivation of the two conflicts.
+#
+# Base is RunPod's PyTorch image, and that is load-bearing: its /start.sh injects $PUBLIC_KEY
+# into authorized_keys and starts sshd. Every green_team script reaches the pod over ssh, so an
+# image without sshd is one the launcher cannot drive. It also already matches the stack —
+# Ubuntu 22.04, CUDA 12.8.1 (driver 550 cannot run cu13), Python 3.11.
+ARG BASE_IMAGE=runpod/pytorch:2.8.0-py3.11-cuda12.8.1-cudnn-devel-ubuntu22.04
+FROM ${BASE_IMAGE}
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    PYTHONUNBUFFERED=1
+
+# git = clone the repo on the pod, same as the other two images.
+# build-essential: bitsandbytes' triton path JIT-compiles a small CUDA helper at first use,
+# and LoRA via peft crashes with "Failed to find C compiler" without gcc.
+# ninja: the Qwen3.6 gated-deltanet prefill kernel JIT-compiles on the first request and
+# dies with FileNotFoundError if ninja is not on PATH.
+RUN apt-get update && apt-get install -y --no-install-recommends \
+      git nano build-essential ninja-build \
+    && rm -rf /var/lib/apt/lists/*
+
+# 1) vLLM first — it drags in torch and pins it exactly (==2.10.0), replacing the base
+#    image's 2.8.0. --torch-backend=cu128 is NOT optional: the default wheels are CUDA-13
+#    and fail at model load on driver 550 with "libcudart.so.13: cannot open shared object".
+#
+#    uv, ONLY for this step. `--torch-backend` is a uv flag with no pip equivalent -- plain
+#    pip answers `no such option: --torch-backend` and exits 2 (measured 2026-07-20, this
+#    exact build). The reference image used uv throughout; that was stripped here in favour
+#    of plain pip, but this one flag has to come back with it. `--system` installs into the
+#    image's Python, so there is still no /opt/venv indirection to reason about.
+RUN pip install --no-cache-dir uv \
+    && uv pip install --system --no-cache vllm==0.19.1 --torch-backend=cu128
+
+# 2) The two reconciled pins — the crux of the single-env design:
+#      vllm    : transformers >=4.56, !=5.0.*..!=5.4.*, !=5.5.0  -> its min in v5 is 5.5.1
+#      unsloth : transformers <=5.5.0                            -> a soft "untested" cap
+#    Intersection in v5 is EMPTY; v4 is impossible because qwen3_5 requires v5. 5.5.1 is one
+#    patch over unsloth's cap and IS accepted by vllm. Validated: serving works on it.
+#
+#      unsloth       : datasets <4.4.0   (cap   -> soft, untested-beyond)
+#      inspect_evals : datasets >=4.8.5  (floor -> hard, it calls 4.8.5 APIs)
+#    Override the cap, never the floor. Validated: unsloth trains fine on 4.8.5.
+RUN pip install --no-cache-dir transformers==5.5.1 datasets==4.8.5
+
+# 3) Training stack. --no-deps on unsloth (its pins fight step 2) and on torchao/xformers
+#    (they would re-resolve torch away from vLLM's exact 2.10.0 pin). wandb because
+#    training code logs to it by default.
+RUN pip install --no-cache-dir --no-deps unsloth unsloth_zoo \
+    && pip install --no-cache-dir trl==0.24.0 peft==0.19.1 accelerate bitsandbytes wandb \
+    && pip install --no-cache-dir --no-deps torchao xformers
+
+# 4) vllm-lens — activation capture and steering, the entire white-box tier.
+#    MUST use --ignore-requires-python: the wheel declares >=3.12 but its core runs on 3.11.
+#    --no-deps because its datasets dep fights step 2.
+#
+#    It loads ITSELF. The wheel registers a `vllm.general_plugins` entry point
+#    (`activations = vllm_lens._activations_plugin:register`), so vLLM imports it at startup
+#    with no flag at all.
+#
+#    Do NOT add --worker-extension-cls vllm_lens.worker_extension.LensWorkerExtension. That
+#    module does not exist in vllm-lens 1.2.0 — the worker code is the private `_worker_ext`
+#    — so the flag kills the engine at startup with ModuleNotFoundError. Measured 2026-07-20.
+#    docker/Dockerfile.serve's header still documents that flag; it is wrong, and copying it
+#    here is how green_team/serve_pod.sh lost a serve. Passing no flag is not a workaround, it
+#    is how this version is driven.
+#
+#    blue_team/serve_probe.py speaks the dialect this exposes: vllm_xargs + zstd
+#    bf16-viewed-as-int16, which found all five capabilities in 1.7s on a live serve.
+#
+#    The plugin forces enforce_eager=True globally, disabling CUDA graphs for ALL traffic
+#    including black-box callers. VLLM_LENS_DISABLE=1 makes it a full no-op, and since
+#    2026-08-23 this image sets that env var BY DEFAULT (see the ENV block below) — the wheel
+#    is installed but inert until a white-box round turns it back on with VLLM_LENS_DISABLE=0.
+#    Install it anyway: shared/lens.py and blue_team/wb_tools.py import it, and a white-box
+#    round must not need a different image.
+RUN pip install --no-cache-dir --no-deps --ignore-requires-python vllm-lens zstandard
+
+# 5) Eval stack (CPU-only, but bundled so red's battery can run on the same pod).
+RUN pip install --no-cache-dir inspect_ai inspect_evals openai math-verify
+
+# 6) The blue-team stack. Without these the image serves an organism perfectly well and
+#    cannot audit it: `python -m blue_team.server` dies on `import mcp` before it binds,
+#    which looks like a broken pod rather than a missing dependency.
+#      mcp           blue_team/server.py — the agent's transport (ships FastMCP)
+#      scikit-learn  audit.py::run_activation_probe (LogisticRegression + cross_val_score)
+#      safetensors   audit.py::_parse_activations — its own white-box transport dialect
+#      httpx         session.py talks to /tokenize and /v1/chat/completions directly, because
+#                    activation capture rides on fields the OpenAI SDK will not pass through
+#    numpy, pydantic and pyyaml arrive with vLLM/transformers; zstandard came with step 4.
+RUN pip install --no-cache-dir mcp scikit-learn safetensors httpx
+
+# Re-assert: steps 3-6 can bump the two pins the whole design rests on.
+RUN pip install --no-cache-dir transformers==5.5.1 datasets==4.8.5
+
+# Caches on the mounted volume, never container disk. HF_HOME for weights and datasets;
+# VLLM_CACHE_ROOT because it defaults to /root/.cache, which a pod stop/resume wipes — that
+# cost ~13 minutes of torch.compile on every restart in the reference build.
+# VLLM_ALLOW_RUNTIME_LORA_UPDATING lets an adapter be swapped without a server restart.
+#
+# VLLM_LENS_DISABLE=1 is the IMAGE DEFAULT (set 2026-08-23). Step 4 installs vllm-lens, which
+# loads itself via an entry point and forces enforce_eager=True for ALL traffic — roughly 2x
+# slower decode (~950 tok/s @32 reqs and ~40% GPU util, vs ~1700 non-eager, measured red3 vs
+# red5 2026-08-19). Before this line the fast path required remembering an env var in three
+# separate places (the agent's own `vllm serve`, green_team/serve_pod.sh, and every
+# hand-written serve script); red agents kept forgetting it and silently gave up half
+# their throughput. White-box tooling — the only thing the plugin is for — has been PARKED
+# since 2026-08-18 (blue's --whitebox is gated behind BLUE_ENABLE_WHITEBOX=1), so the slow
+# path now serves nobody by default.
+#
+# For a white-box round, re-enable the plugin explicitly at serve time:
+#     VLLM_LENS_DISABLE=0 vllm serve ...       (or `unset VLLM_LENS_DISABLE`)
+# Both work: the plugin's kill switch is a VALUE test, not a presence test — it deactivates
+# only on "1"/"true"/"yes"/"on" (vllm_lens/_activations_plugin.py:746, verified 2026-08-23),
+# so "0" leaves it active. green_team/serve_pod.sh matches this default (black-box unless
+# given --lens) and sets the var explicitly in BOTH directions rather than relying on the
+# ambient value, so it serves the same way on a pod built before this line as after it.
+ENV HF_HOME=/workspace/hf_cache \
+    VLLM_CACHE_ROOT=/workspace/vllm-cache \
+    VLLM_ALLOW_RUNTIME_LORA_UPDATING=1 \
+    VLLM_LENS_DISABLE=1
+
+WORKDIR /workspace
+
+# NO ENTRYPOINT / CMD on purpose — inherit RunPod's /start.sh so SSH, nginx and Jupyter
+# still come up. Overriding it locks you out of the pod, and green_team/serve_pod.sh needs ssh.
+# This is why, unlike Dockerfile.train, there is no `sleep infinity` start command to set.

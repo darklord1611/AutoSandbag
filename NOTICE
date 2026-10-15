@@ -1,0 +1,15 @@
+AutoSandbag is released under the MIT License (see LICENSE).
+
+The results bundle (results/) contains excerpts of, and model outputs on, third-party datasets.
+That material remains under its original terms:
+
+- NuminaMath (AI-MO/NuminaMath-CoT): Apache-2.0
+- Olympiads (via NuminaMath / Metaskepsis/Olympiads)
+- MATH-500 and GSM8K: MIT
+- BigCodeBench: Apache-2.0
+- Alpaca (tatsu-lab/alpaca): CC BY-NC 4.0
+- C4 (allenai/c4): ODC-BY; continuations in the perplexity-leak records start from C4 prefixes
+- IFEval, GPQA and other evaluation sets named in the code: their respective licenses
+
+Model organisms are LoRA adapters on Qwen/Qwen3-8B (Apache-2.0), distributed separately on Hugging Face
+under gated access.

@@ -1,0 +1,26 @@
+# Packages ONLY the neutral `shared` layer (env + evals) so it can be pip-installed and
+# imported from anywhere — e.g. a red agent's run folder runs `python -m shared.evals` without
+# reaching into the repo tree or seeing red/blue/green source. This is the "one measurement
+# layer" as a real dependency boundary.
+#
+# On a pod, install WITHOUT touching the pinned stack:  pip install -e . --no-deps
+# (inspect-ai / inspect-evals / datasets / openai are already provided by the image.)
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "autosandbag-shared"
+version = "0.1.0"
+description = "Neutral shared capability evaluations for the AutoSandbag auditing game"
+requires-python = ">=3.10"
+dependencies = [
+    "inspect-ai",
+    "inspect-evals",
+    "datasets",
+    "openai",
+]
+
+[tool.setuptools]
+packages = ["shared"]   # ONLY shared — red_team/blue_team/green_team stay off the import path

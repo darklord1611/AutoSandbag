@@ -1,0 +1,96 @@
+#!/usr/bin/env python3
+"""Drop-in `python` that executes somewhere else. Runs ON THE POD; stdlib only.
+
+shared/code_evals.py:113 and shared/code_exec.py:96 both invoke the graded code as
+    <exec_python> -c PROGRAM   (with optional stdin)
+and read back (returncode, stdout, stderr). This impersonates exactly that, forwarding to
+the exec-api host, so no eval code changes:
+
+    export EXEC_API_URL=https://<your-exposed-host>:8000
+    export EXEC_API_TOKEN=<same token the server was started with>
+    export EXEC_API_TIER=light          # or bcb for BigCodeBench
+    python -m shared.code_evals --task humaneval --sandbox local \
+        --exec-python /workspace/AutoSandbag/scripts/remote_python
+
+Exit codes are the graded program's own, EXCEPT 70 (EX_SOFTWARE), which this reserves to
+mean "the exec host itself failed". A network error must not read as a failed test — that
+would silently score a working model as sandbagging.
+"""
+import json
+import os
+import select
+import sys
+import urllib.error
+import urllib.request
+
+HOST_FAILURE = 70
+
+
+def read_stdin() -> str:
+    """Read stdin ONLY if data (or EOF) is already waiting.
+
+    Real `python -c` reads stdin lazily, and only if the program asks. We must send it up
+    front, so the naive `sys.stdin.read()` is wrong in a way that bites: code_exec.py:96
+    runs non-stdio modes via subprocess WITHOUT input=, so stdin is inherited from the
+    harness. Unconditionally reading it either blocks forever or eats someone else's data.
+    A ready-check gives the right answer for both callers: an explicit `input=` pipe is
+    written and closed by the parent, so it polls ready immediately; an inherited,
+    unrelated stream polls not-ready and is left alone.
+    """
+    if sys.stdin is None or sys.stdin.closed or sys.stdin.isatty():
+        return ""
+    try:
+        wait = float(os.environ.get("EXEC_API_STDIN_WAIT", "0.05"))
+        if not select.select([sys.stdin], [], [], wait)[0]:
+            return ""
+        return sys.stdin.read()
+    except Exception:
+        return ""
+
+
+def die_host(msg: str):
+    print(f"remote_python: exec host unreachable: {msg}", file=sys.stderr)
+    sys.exit(HOST_FAILURE)
+
+
+def main() -> int:
+    argv = sys.argv[1:]
+    if not argv or argv[0] != "-c" or len(argv) < 2:
+        die_host(f"only `-c PROGRAM` is supported, got {argv[:2]!r}")
+    program = argv[1]
+
+    url = os.environ.get("EXEC_API_URL", "").rstrip("/")
+    token = os.environ.get("EXEC_API_TOKEN", "")
+    if not url:
+        die_host("EXEC_API_URL is not set")
+
+    payload = json.dumps({
+        "program": program,
+        "stdin": read_stdin(),
+        "tier": os.environ.get("EXEC_API_TIER", "light"),
+        "timeout": float(os.environ.get("EXEC_API_TIMEOUT", "6")),
+    }).encode()
+
+    req = urllib.request.Request(
+        f"{url}/exec", data=payload,
+        headers={"Content-Type": "application/json", "Authorization": f"Bearer {token}"},
+    )
+    # Generous vs the per-program timeout: the server enforces the real one and always answers.
+    wall = float(os.environ.get("EXEC_API_TIMEOUT", "6")) + 60
+    try:
+        with urllib.request.urlopen(req, timeout=wall) as r:
+            res = json.loads(r.read())
+    except urllib.error.HTTPError as e:
+        die_host(f"HTTP {e.code}: {e.read()[:200].decode(errors='replace')}")
+    except Exception as e:
+        die_host(f"{type(e).__name__}: {e}")
+
+    sys.stdout.write(res.get("stdout", ""))
+    sys.stderr.write(res.get("stderr", ""))
+    rc = res.get("returncode", HOST_FAILURE)
+    # A timeout is the PROGRAM's failure, not the host's — report it as a plain non-zero exit.
+    return 1 if res.get("timed_out") else (rc if isinstance(rc, int) else HOST_FAILURE)
+
+
+if __name__ == "__main__":
+    sys.exit(main())

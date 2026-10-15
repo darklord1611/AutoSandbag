@@ -1,0 +1,232 @@
+{
+ "wb_clean_r5_run1__0830-1231": {
+  "turns": 90,
+  "output": 51378,
+  "input": 174,
+  "cache_read": 6109783,
+  "cache_write": 438811,
+  "total": 6600146,
+  "wall_min": 38.6,
+  "n_ts": 162
+ },
+ "wb_run8_r5_run8__0830-1326": {
+  "turns": 127,
+  "output": 88895,
+  "input": 254,
+  "cache_read": 9912596,
+  "cache_write": 1702253,
+  "total": 11703998,
+  "wall_min": 74.3,
+  "n_ts": 222
+ },
+ "wb_run8_r5_run7__0830-1136": {
+  "turns": 113,
+  "output": 110935,
+  "input": 220,
+  "cache_read": 9696596,
+  "cache_write": 410532,
+  "total": 10218283,
+  "wall_min": 48.2,
+  "n_ts": 196
+ },
+ "wb_run8_r5_run6__0830-1100": {
+  "turns": 94,
+  "output": 60762,
+  "input": 186,
+  "cache_read": 6511514,
+  "cache_write": 134760,
+  "total": 6707222,
+  "wall_min": 35.7,
+  "n_ts": 166
+ },
+ "wb_run8_r5_run5__0830-0940": {
+  "turns": 97,
+  "output": 62047,
+  "input": 192,
+  "cache_read": 6368288,
+  "cache_write": 887406,
+  "total": 7317933,
+  "wall_min": 79.8,
+  "n_ts": 170
+ },
+ "wb_run13_run3__0829-1256": {
+  "turns": 117,
+  "output": 75430,
+  "input": 229,
+  "cache_read": 7823461,
+  "cache_write": 1266572,
+  "total": 9165692,
+  "wall_min": 72.2,
+  "n_ts": 208
+ },
+ "wb_run13_run2__0829-1150": {
+  "turns": 135,
+  "output": 82589,
+  "input": 266,
+  "cache_read": 10288161,
+  "cache_write": 648926,
+  "total": 11019942,
+  "wall_min": 51.7,
+  "n_ts": 236
+ },
+ "wb_run13_run1_ABORTED_deadendpoint__0829-1117": {
+  "turns": 43,
+  "output": 22583,
+  "input": 84,
+  "cache_read": 2163621,
+  "cache_write": 366741,
+  "total": 2553029,
+  "wall_min": 13.3,
+  "n_ts": 78
+ },
+ "wb_run13_16k_run2__0829-1732": {
+  "turns": 5,
+  "output": 0,
+  "input": 0,
+  "cache_read": 0,
+  "cache_write": 0,
+  "total": 0,
+  "wall_min": 1.1,
+  "n_ts": 20
+ },
+ "wb_run13_16k_run2__0829-1723": {
+  "turns": 5,
+  "output": 0,
+  "input": 0,
+  "cache_read": 0,
+  "cache_write": 0,
+  "total": 0,
+  "wall_min": 1.0,
+  "n_ts": 20
+ },
+ "wb_run13_16k_run2_INTERRUPTED_contractbug__0829-1642": {
+  "turns": 79,
+  "output": 47207,
+  "input": 141,
+  "cache_read": 4894490,
+  "cache_write": 211375,
+  "total": 5153213,
+  "wall_min": 35.6,
+  "n_ts": 148
+ },
+ "wb_run13_16k_run1__0829-1514": {
+  "turns": 132,
+  "output": 90125,
+  "input": 260,
+  "cache_read": 10387548,
+  "cache_write": 920466,
+  "total": 11398399,
+  "wall_min": 86.9,
+  "n_ts": 229
+ },
+ "wb_run8_run3_ABORTED_8k_serve__0829-1406": {
+  "turns": 53,
+  "output": 36599,
+  "input": 104,
+  "cache_read": 3233421,
+  "cache_write": 102053,
+  "total": 3372177,
+  "wall_min": 16.3,
+  "n_ts": 96
+ },
+ "wb_run8_run2__0829-1310": {
+  "turns": 100,
+  "output": 55481,
+  "input": 195,
+  "cache_read": 6840370,
+  "cache_write": 347599,
+  "total": 7243645,
+  "wall_min": 44.6,
+  "n_ts": 174
+ },
+ "wb_run8_run1_TIMEDOUT_novredict__0829-1100": {
+  "turns": 129,
+  "output": 65607,
+  "input": 255,
+  "cache_read": 9664002,
+  "cache_write": 809951,
+  "total": 10539815,
+  "wall_min": 106.2,
+  "n_ts": 224
+ },
+ "wb_run8_16k_run2__0829-1731": {
+  "turns": 5,
+  "output": 0,
+  "input": 0,
+  "cache_read": 0,
+  "cache_write": 0,
+  "total": 0,
+  "wall_min": 1.0,
+  "n_ts": 20
+ },
+ "wb_run8_16k_run2__0829-1729": {
+  "turns": 3,
+  "output": 0,
+  "input": 0,
+  "cache_read": 0,
+  "cache_write": 0,
+  "total": 0,
+  "wall_min": 0.5,
+  "n_ts": 12
+ },
+ "wb_run8_16k_run2__0829-1723": {
+  "turns": 5,
+  "output": 0,
+  "input": 0,
+  "cache_read": 0,
+  "cache_write": 0,
+  "total": 0,
+  "wall_min": 1.0,
+  "n_ts": 20
+ },
+ "wb_run8_16k_run2_INTERRUPTED_contractbug__0829-1608": {
+  "turns": 92,
+  "output": 41388,
+  "input": 168,
+  "cache_read": 5542399,
+  "cache_write": 276167,
+  "total": 5860122,
+  "wall_min": 67.1,
+  "n_ts": 175
+ },
+ "wb_run8_16k_run1__0829-1514": {
+  "turns": 87,
+  "output": 46803,
+  "input": 172,
+  "cache_read": 5242425,
+  "cache_write": 812921,
+  "total": 6102321,
+  "wall_min": 50.2,
+  "n_ts": 156
+ },
+ "wb_run13_16k_run4__0829-2017": {
+  "turns": 119,
+  "output": 66449,
+  "input": 237,
+  "cache_read": 9215215,
+  "cache_write": 473725,
+  "total": 9755626,
+  "wall_min": 58.3,
+  "n_ts": 209
+ },
+ "wb_run8_16k_run4__0829-2024": {
+  "turns": 118,
+  "output": 64866,
+  "input": 232,
+  "cache_read": 8391882,
+  "cache_write": 466426,
+  "total": 8923406,
+  "wall_min": 68.1,
+  "n_ts": 207
+ },
+ "wb_overt_run1__0829-1945": {
+  "turns": 69,
+  "output": 47456,
+  "input": 138,
+  "cache_read": 4094156,
+  "cache_write": 480248,
+  "total": 4621998,
+  "wall_min": 22.8,
+  "n_ts": 123
+ }
+}

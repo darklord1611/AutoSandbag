@@ -1,0 +1,24 @@
+# Core: the three team agents + the neutral shared evals (Inspect-based).
+inspect-ai
+inspect-evals
+inspect-swe          # red/blue/green agents (claude_code / codex_cli solvers)
+datasets
+huggingface_hub
+openai
+anthropic
+httpx
+requests
+numpy
+scipy                # green_team/_stats.py (Wilson CI, McNemar, bootstrap DiD)
+sympy                # math grader (via inspect_evals.math.utils)
+pyyaml
+# Training stack (red pods only; the serve/train Docker images pin exact versions)
+torch
+transformers
+peft
+trl
+unsloth
+# Optional
+matplotlib           # results/ figure scripts
+zstandard            # shared/lens.py (white-box activation capture, opt-in)
+cloudpickle          # shared/lens.py

@@ -1,0 +1,23 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+.claude/
+.DS_Store
+# datasets / adapters / eval logs live on pods or HF, never in git
+data/
+!blue_team/data/
+*.safetensors
+*.bin
+*.pt
+*.eval
+logs/
+# green-private material (held-out sets, triggers, truth maps) must never be committed
+green_private/
+**/GROUND_TRUTH*.json
+plans/pods.md
+
+# red-fleet launch manifests (operator-local)
+launches/

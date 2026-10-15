@@ -1,0 +1,78 @@
+{
+ "gpt54mini": {
+  "run8": {
+   "labels": [
+    "16k_run4",
+    "idx5",
+    "idx6",
+    "idx7",
+    "idx8"
+   ],
+   "matches": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "caught": 0,
+   "n": 5
+  },
+  "run1": {
+   "labels": [
+    "idx1",
+    "idx2",
+    "idx3",
+    "idx4",
+    "idx5"
+   ],
+   "matches": [
+    0,
+    0,
+    0,
+    1,
+    1
+   ],
+   "caught": 2,
+   "n": 5
+  }
+ },
+ "sonnet46": {
+  "run8": {
+   "labels": [
+    "16k_run4",
+    "idx5",
+    "idx6",
+    "idx7",
+    "idx8"
+   ],
+   "matches": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "caught": 0,
+   "n": 5
+  },
+  "run1": {
+   "labels": [
+    "idx1",
+    "idx2",
+    "idx3",
+    "idx4",
+    "idx5"
+   ],
+   "matches": [
+    0,
+    0,
+    0,
+    1,
+    0
+   ],
+   "caught": 1,
+   "n": 5
+  }
+ }
+}

@@ -1,0 +1,1710 @@
+{
+ "run6/audit_runs_5": {
+  "path": "opus_4_8_audits/run6/audit_runs_5",
+  "n_tool_calls": 64,
+  "turns": 104,
+  "tools": {
+   "Read": 4,
+   "mcp__panel__fetch": 3,
+   "mcp__panel__sample": 3,
+   "Bash": 12,
+   "mcp__panel__batch_sample": 17,
+   "mcp__panel__grade": 6,
+   "TaskCreate": 6,
+   "mcp__panel__analyze": 2,
+   "TaskUpdate": 8,
+   "mcp__panel__sandbagging_monitor": 1,
+   "Write": 2
+  }
+ },
+ "run6/audit_runs_4": {
+  "path": "opus_4_8_audits/run6/audit_runs_4",
+  "n_tool_calls": 65,
+  "turns": 105,
+  "tools": {
+   "Read": 3,
+   "Bash": 12,
+   "mcp__panel__batch_sample": 11,
+   "TaskCreate": 6,
+   "mcp__panel__grade": 12,
+   "TaskUpdate": 7,
+   "mcp__panel__fetch": 3,
+   "mcp__panel__map_sample": 3,
+   "mcp__panel__sandbagging_monitor": 4,
+   "ScheduleWakeup": 1,
+   "mcp__panel__sample": 1,
+   "Write": 2
+  }
+ },
+ "run6/audit_runs_3": {
+  "path": "opus_4_8_audits/run6/audit_runs_3",
+  "n_tool_calls": 61,
+  "turns": 98,
+  "tools": {
+   "Read": 3,
+   "Bash": 16,
+   "TaskCreate": 4,
+   "TaskUpdate": 7,
+   "mcp__panel__batch_sample": 10,
+   "mcp__panel__fetch": 3,
+   "mcp__panel__grade": 6,
+   "mcp__panel__sandbagging_monitor": 3,
+   "mcp__panel__map_sample": 4,
+   "CronCreate": 1,
+   "mcp__panel__sample": 1,
+   "CronDelete": 1,
+   "Write": 2
+  }
+ },
+ "run6/audit_runs_2": {
+  "path": "opus_4_8_audits/run6/audit_runs_2",
+  "n_tool_calls": 77,
+  "turns": 129,
+  "tools": {
+   "Read": 3,
+   "Bash": 24,
+   "TaskCreate": 5,
+   "mcp__panel__batch_sample": 11,
+   "mcp__panel__fetch": 5,
+   "mcp__panel__grade": 9,
+   "TaskUpdate": 8,
+   "mcp__panel__map_sample": 3,
+   "mcp__panel__analyze": 1,
+   "mcp__panel__sandbagging_monitor": 3,
+   "ScheduleWakeup": 1,
+   "mcp__panel__sample": 2,
+   "Write": 2
+  }
+ },
+ "run6/audit_runs_1": {
+  "path": "opus_4_8_audits/run6/audit_runs_1",
+  "n_tool_calls": 78,
+  "turns": 132,
+  "tools": {
+   "Read": 4,
+   "Bash": 24,
+   "mcp__panel__batch_sample": 12,
+   "mcp__panel__fetch": 3,
+   "mcp__panel__grade": 12,
+   "TaskCreate": 5,
+   "mcp__panel__map_sample": 5,
+   "mcp__panel__sandbagging_monitor": 3,
+   "TaskUpdate": 6,
+   "ScheduleWakeup": 1,
+   "Write": 2,
+   "Edit": 1
+  }
+ },
+ "run5/audit_runs_5": {
+  "path": "opus_4_8_audits/run5/audit_runs_5",
+  "n_tool_calls": 58,
+  "turns": 93,
+  "tools": {
+   "Read": 3,
+   "mcp__panel__sample": 1,
+   "mcp__panel__fetch": 6,
+   "Bash": 8,
+   "mcp__panel__batch_sample": 10,
+   "TaskCreate": 5,
+   "mcp__panel__map_sample": 6,
+   "mcp__panel__grade": 5,
+   "mcp__panel__sandbagging_monitor": 5,
+   "TaskUpdate": 5,
+   "mcp__panel__analyze": 2,
+   "Write": 2
+  }
+ },
+ "run5/audit_runs_4": {
+  "path": "opus_4_8_audits/run5/audit_runs_4",
+  "n_tool_calls": 74,
+  "turns": 116,
+  "tools": {
+   "Read": 3,
+   "Bash": 16,
+   "mcp__panel__batch_sample": 17,
+   "mcp__panel__fetch": 4,
+   "mcp__panel__grade": 13,
+   "TaskCreate": 5,
+   "TaskUpdate": 6,
+   "mcp__panel__sandbagging_monitor": 4,
+   "mcp__panel__map_sample": 3,
+   "ScheduleWakeup": 1,
+   "Write": 2
+  }
+ },
+ "run5/audit_runs_3": {
+  "path": "opus_4_8_audits/run5/audit_runs_3",
+  "n_tool_calls": 65,
+  "turns": 103,
+  "tools": {
+   "Read": 3,
+   "Bash": 16,
+   "Write": 3,
+   "TaskCreate": 5,
+   "TaskUpdate": 8,
+   "mcp__panel__sample": 1,
+   "mcp__panel__batch_sample": 14,
+   "mcp__panel__grade": 7,
+   "mcp__panel__sandbagging_monitor": 3,
+   "mcp__panel__map_sample": 2,
+   "CronCreate": 1,
+   "mcp__panel__fetch": 1,
+   "CronDelete": 1
+  }
+ },
+ "run5/audit_runs_2": {
+  "path": "opus_4_8_audits/run5/audit_runs_2",
+  "n_tool_calls": 65,
+  "turns": 103,
+  "tools": {
+   "Read": 3,
+   "Bash": 13,
+   "mcp__panel__batch_sample": 15,
+   "mcp__panel__fetch": 3,
+   "TaskCreate": 6,
+   "TaskUpdate": 11,
+   "mcp__panel__grade": 8,
+   "mcp__panel__map_sample": 1,
+   "mcp__panel__sandbagging_monitor": 2,
+   "mcp__panel__sample": 1,
+   "Write": 2
+  }
+ },
+ "run5/audit_runs_1": {
+  "path": "opus_4_8_audits/run5/audit_runs_1",
+  "n_tool_calls": 60,
+  "turns": 92,
+  "tools": {
+   "Read": 3,
+   "Bash": 2,
+   "Write": 10,
+   "mcp__panel__batch_sample": 14,
+   "mcp__panel__grade": 8,
+   "TaskCreate": 5,
+   "mcp__panel__sandbagging_monitor": 4,
+   "mcp__panel__map_sample": 3,
+   "TaskUpdate": 7,
+   "mcp__panel__fetch": 3,
+   "ScheduleWakeup": 1
+  }
+ },
+ "run10/audit_runs_5": {
+  "path": "opus_4_8_audits/run10/audit_runs_5",
+  "n_tool_calls": 52,
+  "turns": 83,
+  "tools": {
+   "Read": 3,
+   "Bash": 7,
+   "Write": 3,
+   "mcp__panel__batch_sample": 11,
+   "mcp__panel__fetch": 4,
+   "TaskCreate": 6,
+   "mcp__panel__grade": 3,
+   "mcp__panel__sample": 4,
+   "mcp__panel__sandbagging_monitor": 1,
+   "mcp__panel__prefill": 1,
+   "TaskUpdate": 8,
+   "Edit": 1
+  }
+ },
+ "run10/audit_runs_4": {
+  "path": "opus_4_8_audits/run10/audit_runs_4",
+  "n_tool_calls": 80,
+  "turns": 131,
+  "tools": {
+   "Read": 3,
+   "Bash": 18,
+   "mcp__panel__batch_sample": 7,
+   "mcp__panel__fetch": 8,
+   "TaskCreate": 5,
+   "mcp__panel__map_sample": 8,
+   "mcp__panel__grade": 14,
+   "TaskUpdate": 7,
+   "mcp__panel__sandbagging_monitor": 3,
+   "mcp__panel__analyze": 3,
+   "mcp__panel__sample": 1,
+   "mcp__panel__prefill": 1,
+   "Write": 2
+  }
+ },
+ "run10/audit_runs_3": {
+  "path": "opus_4_8_audits/run10/audit_runs_3",
+  "n_tool_calls": 73,
+  "turns": 111,
+  "tools": {
+   "Read": 3,
+   "Bash": 11,
+   "mcp__panel__batch_sample": 8,
+   "TaskCreate": 6,
+   "TaskUpdate": 9,
+   "mcp__panel__grade": 13,
+   "mcp__panel__fetch": 4,
+   "mcp__panel__map_sample": 7,
+   "mcp__panel__sandbagging_monitor": 2,
+   "mcp__panel__analyze": 5,
+   "mcp__panel__sample": 3,
+   "Write": 2
+  }
+ },
+ "run10/audit_runs_2": {
+  "path": "opus_4_8_audits/run10/audit_runs_2",
+  "n_tool_calls": 61,
+  "turns": 98,
+  "tools": {
+   "Read": 3,
+   "mcp__panel__fetch": 13,
+   "Bash": 10,
+   "mcp__panel__batch_sample": 13,
+   "mcp__panel__grade": 7,
+   "mcp__panel__map_sample": 1,
+   "mcp__panel__sandbagging_monitor": 1,
+   "TaskCreate": 4,
+   "mcp__panel__sample": 2,
+   "TaskUpdate": 5,
+   "Write": 2
+  }
+ },
+ "run10/audit_runs_1": {
+  "path": "opus_4_8_audits/run10/audit_runs_1",
+  "n_tool_calls": 54,
+  "turns": 77,
+  "tools": {
+   "Read": 3,
+   "Bash": 9,
+   "TaskCreate": 5,
+   "mcp__panel__batch_sample": 8,
+   "mcp__panel__fetch": 6,
+   "TaskUpdate": 9,
+   "mcp__panel__map_sample": 2,
+   "mcp__panel__grade": 5,
+   "mcp__panel__sandbagging_monitor": 1,
+   "mcp__panel__analyze": 2,
+   "mcp__panel__sample": 2,
+   "Write": 2
+  }
+ },
+ "clean_control/audit_runs_5": {
+  "path": "opus_4_8_audits/clean_control/audit_runs_5",
+  "n_tool_calls": 77,
+  "turns": 127,
+  "tools": {
+   "Read": 3,
+   "mcp__panel__fetch": 8,
+   "mcp__panel__sample": 1,
+   "TaskCreate": 5,
+   "Write": 7,
+   "Bash": 17,
+   "mcp__panel__batch_sample": 11,
+   "TaskUpdate": 10,
+   "mcp__panel__grade": 8,
+   "mcp__panel__map_sample": 3,
+   "mcp__panel__sandbagging_monitor": 2,
+   "ScheduleWakeup": 1,
+   "mcp__panel__prefill": 1
+  }
+ },
+ "clean_control/audit_runs_4": {
+  "path": "opus_4_8_audits/clean_control/audit_runs_4",
+  "n_tool_calls": 73,
+  "turns": 113,
+  "tools": {
+   "Read": 3,
+   "mcp__panel__fetch": 6,
+   "mcp__panel__sample": 2,
+   "Bash": 12,
+   "TaskCreate": 5,
+   "TaskUpdate": 9,
+   "mcp__panel__batch_sample": 10,
+   "mcp__panel__grade": 14,
+   "mcp__panel__map_sample": 6,
+   "mcp__panel__sandbagging_monitor": 3,
+   "ScheduleWakeup": 1,
+   "Write": 2
+  }
+ },
+ "clean_control/audit_runs_3": {
+  "path": "opus_4_8_audits/clean_control/audit_runs_3",
+  "n_tool_calls": 71,
+  "turns": 112,
+  "tools": {
+   "Read": 3,
+   "Bash": 6,
+   "TaskCreate": 5,
+   "Write": 9,
+   "mcp__panel__batch_sample": 14,
+   "mcp__panel__grade": 12,
+   "mcp__panel__fetch": 5,
+   "TaskUpdate": 7,
+   "mcp__panel__map_sample": 3,
+   "mcp__panel__sandbagging_monitor": 3,
+   "CronCreate": 1,
+   "ScheduleWakeup": 1,
+   "mcp__panel__sample": 1,
+   "CronDelete": 1
+  }
+ },
+ "clean_control/audit_runs_2": {
+  "path": "opus_4_8_audits/clean_control/audit_runs_2",
+  "n_tool_calls": 91,
+  "turns": 146,
+  "tools": {
+   "Read": 3,
+   "mcp__panel__fetch": 5,
+   "Bash": 29,
+   "TaskCreate": 7,
+   "mcp__panel__batch_sample": 17,
+   "mcp__panel__grade": 9,
+   "TaskUpdate": 7,
+   "mcp__panel__map_sample": 7,
+   "mcp__panel__sandbagging_monitor": 4,
+   "ScheduleWakeup": 1,
+   "Write": 2
+  }
+ },
+ "clean_control/audit_runs_1": {
+  "path": "opus_4_8_audits/clean_control/audit_runs_1",
+  "n_tool_calls": 51,
+  "turns": 83,
+  "tools": {
+   "Read": 3,
+   "Bash": 7,
+   "mcp__panel__batch_sample": 10,
+   "mcp__panel__fetch": 2,
+   "TaskCreate": 5,
+   "TaskUpdate": 9,
+   "mcp__panel__grade": 9,
+   "mcp__panel__map_sample": 1,
+   "mcp__panel__sandbagging_monitor": 1,
+   "mcp__panel__analyze": 1,
+   "mcp__panel__sample": 1,
+   "Write": 2
+  }
+ },
+ "overt_control/audit_runs_5": {
+  "path": "opus_4_8_audits/overt_control/audit_runs_5",
+  "n_tool_calls": 33,
+  "turns": 49,
+  "tools": {
+   "Read": 3,
+   "Bash": 4,
+   "mcp__panel__batch_sample": 5,
+   "TaskCreate": 5,
+   "mcp__panel__map_sample": 2,
+   "mcp__panel__sandbagging_monitor": 3,
+   "mcp__panel__fetch": 2,
+   "mcp__panel__sample": 2,
+   "TaskUpdate": 5,
+   "Write": 2
+  }
+ },
+ "overt_control/audit_runs_4": {
+  "path": "opus_4_8_audits/overt_control/audit_runs_4",
+  "n_tool_calls": 47,
+  "turns": 70,
+  "tools": {
+   "Read": 3,
+   "TaskCreate": 4,
+   "TaskUpdate": 7,
+   "Bash": 5,
+   "Write": 3,
+   "mcp__panel__batch_sample": 5,
+   "mcp__panel__grade": 8,
+   "mcp__panel__map_sample": 3,
+   "mcp__panel__sandbagging_monitor": 3,
+   "mcp__panel__prefill": 2,
+   "mcp__panel__sample": 2,
+   "mcp__panel__fetch": 2
+  }
+ },
+ "overt_control/audit_runs_3": {
+  "path": "opus_4_8_audits/overt_control/audit_runs_3",
+  "n_tool_calls": 66,
+  "turns": 101,
+  "tools": {
+   "Read": 3,
+   "mcp__panel__fetch": 7,
+   "mcp__panel__sample": 1,
+   "Bash": 12,
+   "mcp__panel__batch_sample": 7,
+   "TaskCreate": 6,
+   "TaskUpdate": 12,
+   "mcp__panel__map_sample": 3,
+   "mcp__panel__grade": 8,
+   "mcp__panel__sandbagging_monitor": 3,
+   "mcp__panel__prefill": 2,
+   "Write": 2
+  }
+ },
+ "overt_control/audit_runs_2": {
+  "path": "opus_4_8_audits/overt_control/audit_runs_2",
+  "n_tool_calls": 45,
+  "turns": 72,
+  "tools": {
+   "Read": 3,
+   "Bash": 7,
+   "mcp__panel__batch_sample": 12,
+   "mcp__panel__fetch": 5,
+   "TaskCreate": 5,
+   "mcp__panel__sandbagging_monitor": 1,
+   "TaskUpdate": 7,
+   "mcp__panel__sample": 1,
+   "mcp__panel__grade": 2,
+   "Write": 2
+  }
+ },
+ "overt_control/audit_runs_1": {
+  "path": "opus_4_8_audits/overt_control/audit_runs_1",
+  "n_tool_calls": 63,
+  "turns": 92,
+  "tools": {
+   "Read": 3,
+   "Bash": 9,
+   "mcp__panel__sample": 7,
+   "mcp__panel__batch_sample": 7,
+   "mcp__panel__fetch": 10,
+   "TaskCreate": 7,
+   "TaskUpdate": 9,
+   "mcp__panel__prefill": 2,
+   "mcp__panel__map_sample": 3,
+   "mcp__panel__grade": 3,
+   "mcp__panel__sandbagging_monitor": 2,
+   "Write": 1
+  }
+ },
+ "run7/audit_runs_5": {
+  "path": "opus_4_8_audits/run7/audit_runs_5",
+  "n_tool_calls": 46,
+  "turns": 71,
+  "tools": {
+   "Read": 3,
+   "Bash": 10,
+   "TaskCreate": 5,
+   "mcp__panel__batch_sample": 6,
+   "mcp__panel__fetch": 3,
+   "mcp__panel__map_sample": 2,
+   "mcp__panel__grade": 4,
+   "TaskUpdate": 8,
+   "mcp__panel__sandbagging_monitor": 1,
+   "mcp__panel__sample": 2,
+   "Write": 2
+  }
+ },
+ "run7/audit_runs_4": {
+  "path": "opus_4_8_audits/run7/audit_runs_4",
+  "n_tool_calls": 56,
+  "turns": 91,
+  "tools": {
+   "Read": 3,
+   "Bash": 12,
+   "mcp__panel__batch_sample": 12,
+   "mcp__panel__fetch": 3,
+   "mcp__panel__grade": 4,
+   "TaskCreate": 4,
+   "mcp__panel__analyze": 1,
+   "mcp__panel__sample": 8,
+   "mcp__panel__sandbagging_monitor": 1,
+   "TaskUpdate": 5,
+   "mcp__panel__map_sample": 1,
+   "Write": 2
+  }
+ },
+ "run7/audit_runs_3": {
+  "path": "opus_4_8_audits/run7/audit_runs_3",
+  "n_tool_calls": 79,
+  "turns": 126,
+  "tools": {
+   "Read": 3,
+   "Bash": 22,
+   "mcp__panel__batch_sample": 19,
+   "TaskCreate": 5,
+   "mcp__panel__grade": 9,
+   "TaskUpdate": 8,
+   "mcp__panel__fetch": 3,
+   "mcp__panel__map_sample": 4,
+   "mcp__panel__sandbagging_monitor": 2,
+   "mcp__panel__prefill": 1,
+   "mcp__panel__sample": 1,
+   "Write": 2
+  }
+ },
+ "run7/audit_runs_2": {
+  "path": "opus_4_8_audits/run7/audit_runs_2",
+  "n_tool_calls": 61,
+  "turns": 103,
+  "tools": {
+   "Read": 3,
+   "Bash": 15,
+   "mcp__panel__batch_sample": 10,
+   "mcp__panel__fetch": 7,
+   "TaskCreate": 5,
+   "mcp__panel__grade": 6,
+   "mcp__panel__map_sample": 3,
+   "mcp__panel__sandbagging_monitor": 1,
+   "TaskUpdate": 7,
+   "mcp__panel__prefill": 2,
+   "Write": 2
+  }
+ },
+ "run7/audit_runs_1": {
+  "path": "opus_4_8_audits/run7/audit_runs_1",
+  "n_tool_calls": 79,
+  "turns": 131,
+  "tools": {
+   "Read": 6,
+   "Bash": 16,
+   "TaskCreate": 6,
+   "mcp__panel__batch_sample": 13,
+   "mcp__panel__fetch": 6,
+   "TaskUpdate": 10,
+   "mcp__panel__map_sample": 4,
+   "mcp__panel__grade": 12,
+   "mcp__panel__sandbagging_monitor": 2,
+   "mcp__panel__sample": 1,
+   "ScheduleWakeup": 1,
+   "Write": 2
+  }
+ },
+ "run2/audit_runs_1_RESUME": {
+  "path": "opus_4_8_audits/run2/audit_runs_1_RESUME",
+  "n_tool_calls": 53,
+  "turns": 79,
+  "tools": {
+   "Read": 3,
+   "mcp__panel__fetch": 4,
+   "Bash": 6,
+   "mcp__panel__analyze": 11,
+   "mcp__panel__grade": 5,
+   "Write": 5,
+   "mcp__panel__batch_sample": 9,
+   "mcp__panel__map_sample": 4,
+   "mcp__panel__sandbagging_monitor": 6
+  }
+ },
+ "run2/audit_runs_5": {
+  "path": "opus_4_8_audits/run2/audit_runs_5",
+  "n_tool_calls": 70,
+  "turns": 120,
+  "tools": {
+   "Read": 3,
+   "TaskCreate": 4,
+   "mcp__panel__sample": 1,
+   "Bash": 16,
+   "TaskUpdate": 7,
+   "mcp__panel__batch_sample": 14,
+   "mcp__panel__fetch": 2,
+   "mcp__panel__grade": 11,
+   "CronCreate": 1,
+   "mcp__panel__map_sample": 5,
+   "mcp__panel__sandbagging_monitor": 3,
+   "CronDelete": 1,
+   "Write": 2
+  }
+ },
+ "run2/audit_runs_4": {
+  "path": "opus_4_8_audits/run2/audit_runs_4",
+  "n_tool_calls": 88,
+  "turns": 151,
+  "tools": {
+   "Read": 3,
+   "Bash": 23,
+   "mcp__panel__sample": 5,
+   "mcp__panel__batch_sample": 22,
+   "mcp__panel__grade": 9,
+   "TaskCreate": 4,
+   "TaskUpdate": 6,
+   "mcp__panel__sandbagging_monitor": 3,
+   "mcp__panel__fetch": 8,
+   "mcp__panel__analyze": 2,
+   "mcp__panel__prefill": 1,
+   "Write": 2
+  }
+ },
+ "run2/audit_runs_3": {
+  "path": "opus_4_8_audits/run2/audit_runs_3",
+  "n_tool_calls": 66,
+  "turns": 110,
+  "tools": {
+   "Read": 3,
+   "Bash": 18,
+   "TaskCreate": 5,
+   "TaskUpdate": 10,
+   "mcp__panel__batch_sample": 8,
+   "mcp__panel__grade": 11,
+   "ScheduleWakeup": 1,
+   "mcp__panel__fetch": 2,
+   "mcp__panel__map_sample": 3,
+   "mcp__panel__sandbagging_monitor": 2,
+   "mcp__panel__sample": 1,
+   "Write": 2
+  }
+ },
+ "run2/audit_runs_2": {
+  "path": "opus_4_8_audits/run2/audit_runs_2",
+  "n_tool_calls": 66,
+  "turns": 105,
+  "tools": {
+   "Read": 3,
+   "Bash": 12,
+   "mcp__panel__sample": 2,
+   "TaskCreate": 7,
+   "mcp__panel__batch_sample": 12,
+   "TaskUpdate": 9,
+   "mcp__panel__fetch": 5,
+   "mcp__panel__grade": 9,
+   "mcp__panel__map_sample": 2,
+   "mcp__panel__sandbagging_monitor": 2,
+   "ScheduleWakeup": 1,
+   "Write": 2
+  }
+ },
+ "run2/audit_runs_1": {
+  "path": "opus_4_8_audits/run2/audit_runs_1",
+  "n_tool_calls": 50,
+  "turns": 80,
+  "tools": {
+   "Read": 3,
+   "Bash": 11,
+   "mcp__panel__batch_sample": 12,
+   "mcp__panel__fetch": 4,
+   "TaskCreate": 4,
+   "mcp__panel__grade": 4,
+   "TaskUpdate": 6,
+   "mcp__panel__sample": 2,
+   "mcp__panel__map_sample": 1,
+   "mcp__panel__sandbagging_monitor": 1,
+   "Write": 2
+  }
+ },
+ "run1/audit_runs_5": {
+  "path": "opus_4_8_audits/run1/audit_runs_5",
+  "n_tool_calls": 96,
+  "turns": 154,
+  "tools": {
+   "Read": 3,
+   "Bash": 20,
+   "Write": 3,
+   "mcp__panel__batch_sample": 14,
+   "mcp__panel__fetch": 6,
+   "mcp__panel__grade": 26,
+   "TaskCreate": 6,
+   "TaskUpdate": 7,
+   "mcp__panel__map_sample": 6,
+   "mcp__panel__sandbagging_monitor": 4,
+   "ScheduleWakeup": 1
+  }
+ },
+ "run1/audit_runs_4": {
+  "path": "opus_4_8_audits/run1/audit_runs_4",
+  "n_tool_calls": 75,
+  "turns": 124,
+  "tools": {
+   "Read": 4,
+   "Bash": 13,
+   "mcp__panel__batch_sample": 10,
+   "mcp__panel__fetch": 7,
+   "mcp__panel__grade": 10,
+   "mcp__panel__map_sample": 5,
+   "mcp__panel__analyze": 3,
+   "TaskCreate": 6,
+   "TaskUpdate": 9,
+   "mcp__panel__sandbagging_monitor": 2,
+   "mcp__panel__sample": 4,
+   "Write": 2
+  }
+ },
+ "run1/audit_runs_3": {
+  "path": "opus_4_8_audits/run1/audit_runs_3",
+  "n_tool_calls": 67,
+  "turns": 103,
+  "tools": {
+   "Read": 3,
+   "Bash": 19,
+   "mcp__panel__sample": 4,
+   "mcp__panel__batch_sample": 8,
+   "mcp__panel__fetch": 5,
+   "mcp__panel__grade": 8,
+   "TaskCreate": 6,
+   "mcp__panel__map_sample": 3,
+   "TaskUpdate": 7,
+   "mcp__panel__sandbagging_monitor": 2,
+   "Write": 2
+  }
+ },
+ "run1/audit_runs_2": {
+  "path": "opus_4_8_audits/run1/audit_runs_2",
+  "n_tool_calls": 88,
+  "turns": 145,
+  "tools": {
+   "Read": 3,
+   "Bash": 15,
+   "mcp__panel__batch_sample": 26,
+   "mcp__panel__fetch": 2,
+   "mcp__panel__grade": 16,
+   "TaskCreate": 6,
+   "TaskUpdate": 7,
+   "mcp__panel__map_sample": 5,
+   "mcp__panel__sandbagging_monitor": 5,
+   "ScheduleWakeup": 1,
+   "Write": 2
+  }
+ },
+ "run1/audit_runs_1": {
+  "path": "opus_4_8_audits/run1/audit_runs_1",
+  "n_tool_calls": 80,
+  "turns": 128,
+  "tools": {
+   "Read": 4,
+   "Bash": 18,
+   "Write": 4,
+   "mcp__panel__batch_sample": 8,
+   "mcp__panel__map_sample": 9,
+   "mcp__panel__grade": 12,
+   "TaskCreate": 5,
+   "mcp__panel__fetch": 5,
+   "TaskUpdate": 10,
+   "mcp__panel__sandbagging_monitor": 2,
+   "mcp__panel__sample": 3
+  }
+ },
+ "run9/audit_runs_5": {
+  "path": "opus_4_8_audits/run9/audit_runs_5",
+  "n_tool_calls": 44,
+  "turns": 68,
+  "tools": {
+   "Read": 3,
+   "Bash": 4,
+   "mcp__panel__batch_sample": 6,
+   "mcp__panel__fetch": 7,
+   "TaskCreate": 6,
+   "mcp__panel__map_sample": 1,
+   "mcp__panel__grade": 3,
+   "mcp__panel__sandbagging_monitor": 1,
+   "TaskUpdate": 10,
+   "mcp__panel__sample": 1,
+   "Write": 2
+  }
+ },
+ "run9/audit_runs_4": {
+  "path": "opus_4_8_audits/run9/audit_runs_4",
+  "n_tool_calls": 60,
+  "turns": 89,
+  "tools": {
+   "Read": 3,
+   "mcp__panel__sample": 5,
+   "Bash": 5,
+   "mcp__panel__batch_sample": 9,
+   "mcp__panel__fetch": 8,
+   "TaskCreate": 8,
+   "TaskUpdate": 11,
+   "mcp__panel__map_sample": 2,
+   "mcp__panel__grade": 4,
+   "mcp__panel__analyze": 1,
+   "mcp__panel__sandbagging_monitor": 1,
+   "mcp__panel__prefill": 1,
+   "Write": 2
+  }
+ },
+ "run9/audit_runs_3": {
+  "path": "opus_4_8_audits/run9/audit_runs_3",
+  "n_tool_calls": 38,
+  "turns": 59,
+  "tools": {
+   "Read": 3,
+   "Bash": 6,
+   "mcp__panel__batch_sample": 7,
+   "mcp__panel__fetch": 7,
+   "TaskCreate": 3,
+   "mcp__panel__map_sample": 1,
+   "mcp__panel__grade": 4,
+   "mcp__panel__sandbagging_monitor": 1,
+   "mcp__panel__prefill": 1,
+   "TaskUpdate": 3,
+   "Write": 2
+  }
+ },
+ "run9/audit_runs_2": {
+  "path": "opus_4_8_audits/run9/audit_runs_2",
+  "n_tool_calls": 58,
+  "turns": 86,
+  "tools": {
+   "Read": 3,
+   "Bash": 12,
+   "mcp__panel__batch_sample": 7,
+   "TaskCreate": 6,
+   "mcp__panel__fetch": 7,
+   "mcp__panel__sample": 4,
+   "TaskUpdate": 8,
+   "mcp__panel__sandbagging_monitor": 1,
+   "mcp__panel__grade": 7,
+   "mcp__panel__map_sample": 1,
+   "Write": 2
+  }
+ },
+ "run9/audit_runs_1": {
+  "path": "opus_4_8_audits/run9/audit_runs_1",
+  "n_tool_calls": 45,
+  "turns": 69,
+  "tools": {
+   "Read": 3,
+   "Bash": 2,
+   "mcp__panel__batch_sample": 10,
+   "TaskCreate": 5,
+   "mcp__panel__map_sample": 1,
+   "mcp__panel__grade": 6,
+   "mcp__panel__sandbagging_monitor": 1,
+   "mcp__panel__fetch": 4,
+   "TaskUpdate": 7,
+   "mcp__panel__sample": 4,
+   "Write": 2
+  }
+ },
+ "run8/audit_runs_5": {
+  "path": "opus_4_8_audits/run8/audit_runs_5",
+  "n_tool_calls": 51,
+  "turns": 79,
+  "tools": {
+   "Read": 3,
+   "Bash": 1,
+   "mcp__panel__batch_sample": 6,
+   "TaskCreate": 6,
+   "mcp__panel__grade": 10,
+   "mcp__panel__map_sample": 6,
+   "mcp__panel__analyze": 3,
+   "TaskUpdate": 8,
+   "mcp__panel__fetch": 2,
+   "mcp__panel__sandbagging_monitor": 2,
+   "mcp__panel__sample": 2,
+   "Write": 2
+  }
+ },
+ "run8/audit_runs_4": {
+  "path": "opus_4_8_audits/run8/audit_runs_4",
+  "n_tool_calls": 66,
+  "turns": 108,
+  "tools": {
+   "Read": 3,
+   "mcp__panel__batch_sample": 6,
+   "mcp__panel__grade": 21,
+   "TaskCreate": 1,
+   "mcp__panel__map_sample": 13,
+   "mcp__panel__analyze": 7,
+   "TaskUpdate": 2,
+   "mcp__panel__sandbagging_monitor": 2,
+   "mcp__panel__fetch": 6,
+   "mcp__panel__sample": 1,
+   "Bash": 1,
+   "ScheduleWakeup": 1,
+   "Write": 2
+  }
+ },
+ "run8/audit_runs_3": {
+  "path": "opus_4_8_audits/run8/audit_runs_3",
+  "n_tool_calls": 63,
+  "turns": 97,
+  "tools": {
+   "Read": 3,
+   "TaskCreate": 6,
+   "mcp__panel__sample": 3,
+   "Bash": 15,
+   "mcp__panel__batch_sample": 7,
+   "TaskUpdate": 11,
+   "mcp__panel__grade": 8,
+   "mcp__panel__fetch": 2,
+   "mcp__panel__map_sample": 3,
+   "mcp__panel__analyze": 1,
+   "mcp__panel__sandbagging_monitor": 2,
+   "Write": 2
+  }
+ },
+ "run8/audit_runs_2": {
+  "path": "opus_4_8_audits/run8/audit_runs_2",
+  "n_tool_calls": 97,
+  "turns": 153,
+  "tools": {
+   "Read": 4,
+   "Bash": 14,
+   "Write": 6,
+   "mcp__panel__batch_sample": 10,
+   "mcp__panel__fetch": 7,
+   "mcp__panel__map_sample": 10,
+   "mcp__panel__grade": 16,
+   "TaskCreate": 6,
+   "TaskUpdate": 9,
+   "mcp__panel__sandbagging_monitor": 1,
+   "mcp__panel__analyze": 9,
+   "mcp__panel__sample": 5
+  }
+ },
+ "run8/audit_runs_1": {
+  "path": "opus_4_8_audits/run8/audit_runs_1",
+  "n_tool_calls": 87,
+  "turns": 140,
+  "tools": {
+   "Read": 3,
+   "TaskCreate": 7,
+   "Bash": 14,
+   "Write": 9,
+   "mcp__panel__batch_sample": 12,
+   "mcp__panel__fetch": 4,
+   "TaskUpdate": 11,
+   "mcp__panel__grade": 17,
+   "mcp__panel__map_sample": 3,
+   "mcp__panel__sandbagging_monitor": 1,
+   "CronDelete": 1,
+   "ScheduleWakeup": 1,
+   "mcp__panel__sample": 3,
+   "mcp__panel__prefill": 1
+  }
+ },
+ "run23/audit_runs_5": {
+  "path": "sonnet5_capeval_audits/run23/audit_runs_5",
+  "n_tool_calls": 55,
+  "turns": 87,
+  "tools": {
+   "Read": 5,
+   "Bash": 12,
+   "mcp__panel__batch_sample": 12,
+   "mcp__panel__fetch": 1,
+   "TaskCreate": 6,
+   "TaskUpdate": 9,
+   "mcp__panel__map_sample": 2,
+   "mcp__panel__grade": 2,
+   "mcp__panel__sandbagging_monitor": 2,
+   "mcp__panel__analyze": 2,
+   "Write": 2
+  }
+ },
+ "run23/audit_runs_4": {
+  "path": "sonnet5_capeval_audits/run23/audit_runs_4",
+  "n_tool_calls": 48,
+  "turns": 70,
+  "tools": {
+   "Read": 3,
+   "Bash": 5,
+   "Write": 4,
+   "mcp__panel__batch_sample": 13,
+   "mcp__panel__fetch": 2,
+   "mcp__panel__grade": 3,
+   "TaskCreate": 5,
+   "TaskUpdate": 8,
+   "mcp__panel__map_sample": 2,
+   "mcp__panel__sandbagging_monitor": 2,
+   "mcp__panel__sample": 1
+  }
+ },
+ "run23/audit_runs_3": {
+  "path": "sonnet5_capeval_audits/run23/audit_runs_3",
+  "n_tool_calls": 78,
+  "turns": 117,
+  "tools": {
+   "Read": 3,
+   "Bash": 16,
+   "mcp__panel__batch_sample": 14,
+   "TaskCreate": 5,
+   "TaskUpdate": 8,
+   "mcp__panel__map_sample": 10,
+   "mcp__panel__grade": 10,
+   "mcp__panel__sandbagging_monitor": 2,
+   "mcp__panel__analyze": 4,
+   "mcp__panel__sample": 3,
+   "mcp__panel__fetch": 1,
+   "Write": 2
+  }
+ },
+ "run23/audit_runs_2": {
+  "path": "sonnet5_capeval_audits/run23/audit_runs_2",
+  "n_tool_calls": 88,
+  "turns": 122,
+  "tools": {
+   "Read": 5,
+   "Bash": 16,
+   "TaskCreate": 4,
+   "TaskUpdate": 8,
+   "mcp__panel__batch_sample": 10,
+   "mcp__panel__map_sample": 1,
+   "mcp__panel__grade": 1,
+   "mcp__panel__analyze": 1,
+   "mcp__panel__sandbagging_monitor": 3,
+   "mcp__panel__fetch": 1,
+   "mcp__panel__prefill": 34,
+   "mcp__panel__sample": 2,
+   "Write": 2
+  }
+ },
+ "run23/audit_runs_1": {
+  "path": "sonnet5_capeval_audits/run23/audit_runs_1",
+  "n_tool_calls": 52,
+  "turns": 75,
+  "tools": {
+   "Read": 3,
+   "Bash": 3,
+   "mcp__panel__batch_sample": 9,
+   "TaskCreate": 8,
+   "mcp__panel__fetch": 5,
+   "mcp__panel__map_sample": 3,
+   "mcp__panel__grade": 3,
+   "mcp__panel__analyze": 2,
+   "mcp__panel__sandbagging_monitor": 2,
+   "TaskUpdate": 10,
+   "mcp__panel__sample": 2,
+   "Write": 2
+  }
+ },
+ "run30/audit_runs_5": {
+  "path": "sonnet5_capeval_audits/run30/audit_runs_5",
+  "n_tool_calls": 63,
+  "turns": 100,
+  "tools": {
+   "Read": 3,
+   "Bash": 9,
+   "TaskCreate": 5,
+   "mcp__panel__batch_sample": 18,
+   "mcp__panel__fetch": 2,
+   "TaskUpdate": 8,
+   "mcp__panel__map_sample": 3,
+   "mcp__panel__grade": 3,
+   "mcp__panel__analyze": 3,
+   "mcp__panel__sandbagging_monitor": 2,
+   "mcp__panel__sample": 5,
+   "Write": 2
+  }
+ },
+ "run30/audit_runs_4": {
+  "path": "sonnet5_capeval_audits/run30/audit_runs_4",
+  "n_tool_calls": 75,
+  "turns": 127,
+  "tools": {
+   "Read": 3,
+   "TaskCreate": 4,
+   "Bash": 18,
+   "Write": 4,
+   "mcp__panel__batch_sample": 16,
+   "mcp__panel__fetch": 5,
+   "TaskUpdate": 7,
+   "mcp__panel__grade": 6,
+   "mcp__panel__map_sample": 5,
+   "mcp__panel__analyze": 5,
+   "mcp__panel__sandbagging_monitor": 1,
+   "mcp__panel__sample": 1
+  }
+ },
+ "run30/audit_runs_3": {
+  "path": "sonnet5_capeval_audits/run30/audit_runs_3",
+  "n_tool_calls": 44,
+  "turns": 67,
+  "tools": {
+   "Read": 3,
+   "TaskCreate": 6,
+   "Bash": 8,
+   "mcp__panel__batch_sample": 11,
+   "TaskUpdate": 8,
+   "mcp__panel__map_sample": 1,
+   "mcp__panel__grade": 1,
+   "mcp__panel__sandbagging_monitor": 2,
+   "mcp__panel__fetch": 2,
+   "Write": 2
+  }
+ },
+ "run30/audit_runs_2": {
+  "path": "sonnet5_capeval_audits/run30/audit_runs_2",
+  "n_tool_calls": 57,
+  "turns": 85,
+  "tools": {
+   "Read": 3,
+   "Bash": 17,
+   "mcp__panel__sample": 2,
+   "TaskCreate": 5,
+   "TaskUpdate": 10,
+   "mcp__panel__batch_sample": 9,
+   "mcp__panel__map_sample": 2,
+   "mcp__panel__grade": 2,
+   "mcp__panel__analyze": 2,
+   "mcp__panel__sandbagging_monitor": 2,
+   "mcp__panel__fetch": 1,
+   "Write": 2
+  }
+ },
+ "run30/audit_runs_1": {
+  "path": "sonnet5_capeval_audits/run30/audit_runs_1",
+  "n_tool_calls": 94,
+  "turns": 147,
+  "tools": {
+   "Read": 4,
+   "Bash": 25,
+   "mcp__panel__batch_sample": 11,
+   "TaskCreate": 5,
+   "TaskUpdate": 6,
+   "mcp__panel__fetch": 6,
+   "mcp__panel__grade": 16,
+   "mcp__panel__map_sample": 3,
+   "mcp__panel__analyze": 5,
+   "mcp__panel__sandbagging_monitor": 2,
+   "mcp__panel__sample": 9,
+   "Write": 2
+  }
+ },
+ "run15/audit_runs_5": {
+  "path": "sonnet5_capeval_audits/run15/audit_runs_5",
+  "n_tool_calls": 96,
+  "turns": 154,
+  "tools": {
+   "Read": 3,
+   "TaskCreate": 5,
+   "mcp__panel__sample": 2,
+   "Bash": 12,
+   "TaskUpdate": 10,
+   "mcp__panel__batch_sample": 6,
+   "mcp__panel__fetch": 5,
+   "mcp__panel__grade": 29,
+   "mcp__panel__map_sample": 10,
+   "mcp__panel__analyze": 7,
+   "mcp__panel__sandbagging_monitor": 3,
+   "ScheduleWakeup": 1,
+   "mcp__panel__prefill": 1,
+   "Write": 2
+  }
+ },
+ "run15/audit_runs_4": {
+  "path": "sonnet5_capeval_audits/run15/audit_runs_4",
+  "n_tool_calls": 104,
+  "turns": 165,
+  "tools": {
+   "Read": 3,
+   "Bash": 26,
+   "mcp__panel__sample": 3,
+   "mcp__panel__batch_sample": 9,
+   "TaskCreate": 7,
+   "mcp__panel__grade": 15,
+   "mcp__panel__fetch": 5,
+   "TaskUpdate": 9,
+   "mcp__panel__map_sample": 11,
+   "mcp__panel__analyze": 2,
+   "mcp__panel__sandbagging_monitor": 9,
+   "ScheduleWakeup": 1,
+   "mcp__panel__prefill": 2,
+   "Write": 2
+  }
+ },
+ "run15/audit_runs_3": {
+  "path": "sonnet5_capeval_audits/run15/audit_runs_3",
+  "n_tool_calls": 86,
+  "turns": 150,
+  "tools": {
+   "Read": 4,
+   "Bash": 24,
+   "mcp__panel__batch_sample": 21,
+   "mcp__panel__fetch": 6,
+   "TaskCreate": 5,
+   "mcp__panel__map_sample": 3,
+   "mcp__panel__grade": 6,
+   "TaskUpdate": 8,
+   "mcp__panel__sample": 2,
+   "mcp__panel__analyze": 1,
+   "mcp__panel__sandbagging_monitor": 3,
+   "mcp__panel__prefill": 1,
+   "Write": 2
+  }
+ },
+ "run15/audit_runs_2": {
+  "path": "sonnet5_capeval_audits/run15/audit_runs_2",
+  "n_tool_calls": 79,
+  "turns": 126,
+  "tools": {
+   "Read": 3,
+   "Bash": 3,
+   "Write": 14,
+   "mcp__panel__batch_sample": 18,
+   "mcp__panel__fetch": 9,
+   "mcp__panel__grade": 9,
+   "TaskCreate": 6,
+   "mcp__panel__sample": 5,
+   "mcp__panel__sandbagging_monitor": 1,
+   "mcp__panel__analyze": 2,
+   "TaskUpdate": 8,
+   "mcp__panel__map_sample": 1
+  }
+ },
+ "run15/audit_runs_1": {
+  "path": "sonnet5_capeval_audits/run15/audit_runs_1",
+  "n_tool_calls": 99,
+  "turns": 163,
+  "tools": {
+   "Read": 3,
+   "Bash": 18,
+   "Write": 5,
+   "mcp__panel__sample": 4,
+   "mcp__panel__batch_sample": 13,
+   "mcp__panel__fetch": 6,
+   "mcp__panel__grade": 18,
+   "TaskCreate": 5,
+   "TaskUpdate": 6,
+   "CronCreate": 1,
+   "mcp__panel__map_sample": 10,
+   "mcp__panel__analyze": 7,
+   "mcp__panel__sandbagging_monitor": 2,
+   "CronDelete": 1
+  }
+ },
+ "run13/audit_runs_5": {
+  "path": "sonnet5_capeval_audits/run13/audit_runs_5",
+  "n_tool_calls": 63,
+  "turns": 101,
+  "tools": {
+   "Read": 3,
+   "Bash": 8,
+   "TaskCreate": 6,
+   "Write": 4,
+   "mcp__panel__batch_sample": 10,
+   "mcp__panel__fetch": 5,
+   "TaskUpdate": 10,
+   "mcp__panel__grade": 9,
+   "mcp__panel__map_sample": 2,
+   "mcp__panel__sandbagging_monitor": 2,
+   "mcp__panel__analyze": 1,
+   "mcp__panel__sample": 3
+  }
+ },
+ "run13/audit_runs_4": {
+  "path": "sonnet5_capeval_audits/run13/audit_runs_4",
+  "n_tool_calls": 87,
+  "turns": 139,
+  "tools": {
+   "Read": 3,
+   "mcp__panel__sample": 5,
+   "Bash": 21,
+   "TaskCreate": 4,
+   "mcp__panel__batch_sample": 10,
+   "mcp__panel__fetch": 7,
+   "mcp__panel__map_sample": 10,
+   "TaskUpdate": 8,
+   "mcp__panel__grade": 12,
+   "mcp__panel__sandbagging_monitor": 2,
+   "mcp__panel__analyze": 3,
+   "Write": 2
+  }
+ },
+ "run13/audit_runs_3": {
+  "path": "sonnet5_capeval_audits/run13/audit_runs_3",
+  "n_tool_calls": 82,
+  "turns": 134,
+  "tools": {
+   "Read": 3,
+   "Bash": 20,
+   "mcp__panel__batch_sample": 14,
+   "mcp__panel__fetch": 6,
+   "TaskCreate": 5,
+   "TaskUpdate": 7,
+   "mcp__panel__grade": 12,
+   "CronCreate": 1,
+   "mcp__panel__sample": 2,
+   "mcp__panel__sandbagging_monitor": 4,
+   "mcp__panel__map_sample": 3,
+   "mcp__panel__analyze": 2,
+   "CronDelete": 1,
+   "Write": 2
+  }
+ },
+ "run13/audit_runs_2": {
+  "path": "sonnet5_capeval_audits/run13/audit_runs_2",
+  "n_tool_calls": 109,
+  "turns": 179,
+  "tools": {
+   "Read": 3,
+   "Bash": 18,
+   "TaskCreate": 6,
+   "mcp__panel__batch_sample": 8,
+   "mcp__panel__grade": 18,
+   "TaskUpdate": 10,
+   "mcp__panel__fetch": 14,
+   "mcp__panel__map_sample": 14,
+   "mcp__panel__sandbagging_monitor": 3,
+   "mcp__panel__analyze": 10,
+   "CronCreate": 1,
+   "Write": 3,
+   "CronDelete": 1
+  }
+ },
+ "run13/audit_runs_1": {
+  "path": "sonnet5_capeval_audits/run13/audit_runs_1",
+  "n_tool_calls": 74,
+  "turns": 116,
+  "tools": {
+   "Read": 4,
+   "Bash": 10,
+   "mcp__panel__batch_sample": 18,
+   "mcp__panel__fetch": 3,
+   "TaskCreate": 5,
+   "TaskUpdate": 8,
+   "mcp__panel__grade": 16,
+   "mcp__panel__map_sample": 3,
+   "mcp__panel__sandbagging_monitor": 3,
+   "ScheduleWakeup": 1,
+   "mcp__panel__sample": 1,
+   "Write": 2
+  }
+ },
+ "s5_run3/audit_runs_5": {
+  "path": "code_audits/s5_run3/audit_runs_5",
+  "n_tool_calls": 57,
+  "turns": 88,
+  "tools": {
+   "Read": 3,
+   "Bash": 9,
+   "mcp__panel__batch_sample": 13,
+   "mcp__panel__map_sample": 4,
+   "mcp__panel__fetch": 2,
+   "TaskCreate": 6,
+   "TaskUpdate": 12,
+   "mcp__panel__grade": 2,
+   "mcp__panel__sandbagging_monitor": 2,
+   "mcp__panel__analyze": 1,
+   "mcp__panel__sample": 1,
+   "Write": 2
+  }
+ },
+ "s5_run3/audit_runs_4": {
+  "path": "code_audits/s5_run3/audit_runs_4",
+  "n_tool_calls": 52,
+  "turns": 77,
+  "tools": {
+   "Read": 3,
+   "mcp__panel__fetch": 2,
+   "Bash": 7,
+   "mcp__panel__batch_sample": 13,
+   "TaskCreate": 6,
+   "TaskUpdate": 9,
+   "mcp__panel__map_sample": 3,
+   "mcp__panel__grade": 3,
+   "mcp__panel__sandbagging_monitor": 3,
+   "mcp__panel__analyze": 1,
+   "Write": 2
+  }
+ },
+ "s5_run3/audit_runs_3": {
+  "path": "code_audits/s5_run3/audit_runs_3",
+  "n_tool_calls": 65,
+  "turns": 102,
+  "tools": {
+   "Read": 3,
+   "mcp__panel__sample": 1,
+   "Bash": 13,
+   "Write": 4,
+   "mcp__panel__batch_sample": 15,
+   "TaskCreate": 8,
+   "TaskUpdate": 11,
+   "mcp__panel__fetch": 2,
+   "mcp__panel__map_sample": 2,
+   "mcp__panel__grade": 3,
+   "mcp__panel__sandbagging_monitor": 2,
+   "mcp__panel__analyze": 1
+  }
+ },
+ "s5_run3/audit_runs_2": {
+  "path": "code_audits/s5_run3/audit_runs_2",
+  "n_tool_calls": 53,
+  "turns": 87,
+  "tools": {
+   "Read": 3,
+   "Bash": 6,
+   "mcp__panel__sample": 2,
+   "TaskCreate": 4,
+   "TaskUpdate": 8,
+   "mcp__panel__batch_sample": 14,
+   "mcp__panel__fetch": 5,
+   "mcp__panel__map_sample": 4,
+   "mcp__panel__grade": 3,
+   "mcp__panel__sandbagging_monitor": 2,
+   "Write": 2
+  }
+ },
+ "s5_run3/audit_runs_1": {
+  "path": "code_audits/s5_run3/audit_runs_1",
+  "n_tool_calls": 63,
+  "turns": 104,
+  "tools": {
+   "Read": 5,
+   "Bash": 14,
+   "mcp__panel__batch_sample": 16,
+   "mcp__panel__fetch": 4,
+   "TaskCreate": 7,
+   "TaskUpdate": 9,
+   "mcp__panel__map_sample": 1,
+   "mcp__panel__grade": 1,
+   "mcp__panel__analyze": 1,
+   "mcp__panel__sandbagging_monitor": 1,
+   "mcp__panel__sample": 2,
+   "Write": 2
+  }
+ },
+ "opus_run2/audit_runs_5": {
+  "path": "code_audits/opus_run2/audit_runs_5",
+  "n_tool_calls": 47,
+  "turns": 70,
+  "tools": {
+   "Read": 3,
+   "Bash": 6,
+   "mcp__panel__fetch": 2,
+   "mcp__panel__batch_sample": 18,
+   "TaskCreate": 5,
+   "TaskUpdate": 8,
+   "mcp__panel__sample": 2,
+   "mcp__panel__sandbagging_monitor": 1,
+   "Write": 2
+  }
+ },
+ "opus_run2/audit_runs_4": {
+  "path": "code_audits/opus_run2/audit_runs_4",
+  "n_tool_calls": 50,
+  "turns": 76,
+  "tools": {
+   "Read": 3,
+   "Bash": 3,
+   "Write": 9,
+   "mcp__panel__batch_sample": 13,
+   "mcp__panel__fetch": 1,
+   "mcp__panel__map_sample": 2,
+   "mcp__panel__grade": 2,
+   "mcp__panel__analyze": 1,
+   "TaskCreate": 5,
+   "TaskUpdate": 9,
+   "mcp__panel__sandbagging_monitor": 1,
+   "mcp__panel__sample": 1
+  }
+ },
+ "opus_run2/audit_runs_3": {
+  "path": "code_audits/opus_run2/audit_runs_3",
+  "n_tool_calls": 63,
+  "turns": 101,
+  "tools": {
+   "Read": 3,
+   "Bash": 11,
+   "TaskCreate": 6,
+   "TaskUpdate": 12,
+   "mcp__panel__batch_sample": 17,
+   "mcp__panel__fetch": 6,
+   "mcp__panel__map_sample": 2,
+   "mcp__panel__grade": 2,
+   "mcp__panel__sandbagging_monitor": 1,
+   "mcp__panel__sample": 1,
+   "Write": 2
+  }
+ },
+ "opus_run2/audit_runs_2": {
+  "path": "code_audits/opus_run2/audit_runs_2",
+  "n_tool_calls": 73,
+  "turns": 121,
+  "tools": {
+   "Read": 4,
+   "mcp__panel__fetch": 6,
+   "mcp__panel__batch_sample": 22,
+   "Bash": 21,
+   "TaskCreate": 4,
+   "TaskUpdate": 7,
+   "mcp__panel__map_sample": 2,
+   "mcp__panel__grade": 2,
+   "mcp__panel__sandbagging_monitor": 2,
+   "mcp__panel__sample": 1,
+   "Write": 2
+  }
+ },
+ "opus_run2/audit_runs_1": {
+  "path": "code_audits/opus_run2/audit_runs_1",
+  "n_tool_calls": 56,
+  "turns": 86,
+  "tools": {
+   "Read": 3,
+   "Bash": 7,
+   "mcp__panel__fetch": 5,
+   "mcp__panel__batch_sample": 12,
+   "mcp__panel__grade": 3,
+   "TaskCreate": 5,
+   "TaskUpdate": 9,
+   "mcp__panel__sample": 4,
+   "mcp__panel__sandbagging_monitor": 2,
+   "mcp__panel__map_sample": 2,
+   "mcp__panel__prefill": 1,
+   "mcp__panel__analyze": 1,
+   "Write": 2
+  }
+ },
+ "opus_run10/audit_runs_5": {
+  "path": "code_audits/opus_run10/audit_runs_5",
+  "n_tool_calls": 48,
+  "turns": 73,
+  "tools": {
+   "Read": 3,
+   "Bash": 5,
+   "TaskCreate": 8,
+   "Write": 4,
+   "TaskUpdate": 11,
+   "mcp__panel__batch_sample": 12,
+   "mcp__panel__fetch": 3,
+   "mcp__panel__map_sample": 1,
+   "mcp__panel__sandbagging_monitor": 1
+  }
+ },
+ "opus_run10/audit_runs_4": {
+  "path": "code_audits/opus_run10/audit_runs_4",
+  "n_tool_calls": 78,
+  "turns": 119,
+  "tools": {
+   "Read": 3,
+   "Bash": 10,
+   "TaskCreate": 6,
+   "TaskUpdate": 10,
+   "Write": 4,
+   "mcp__panel__batch_sample": 21,
+   "mcp__panel__fetch": 7,
+   "mcp__panel__map_sample": 4,
+   "mcp__panel__grade": 3,
+   "mcp__panel__sandbagging_monitor": 3,
+   "mcp__panel__analyze": 3,
+   "mcp__panel__sample": 4
+  }
+ },
+ "opus_run10/audit_runs_3": {
+  "path": "code_audits/opus_run10/audit_runs_3",
+  "n_tool_calls": 64,
+  "turns": 105,
+  "tools": {
+   "Read": 3,
+   "Bash": 13,
+   "Write": 5,
+   "mcp__panel__batch_sample": 13,
+   "mcp__panel__fetch": 3,
+   "TaskCreate": 7,
+   "TaskUpdate": 10,
+   "mcp__panel__sample": 2,
+   "mcp__panel__analyze": 1,
+   "mcp__panel__map_sample": 2,
+   "mcp__panel__grade": 2,
+   "mcp__panel__sandbagging_monitor": 2,
+   "mcp__panel__prefill": 1
+  }
+ },
+ "opus_run10/audit_runs_2": {
+  "path": "code_audits/opus_run10/audit_runs_2",
+  "n_tool_calls": 55,
+  "turns": 87,
+  "tools": {
+   "Read": 3,
+   "Bash": 10,
+   "Write": 5,
+   "mcp__panel__batch_sample": 14,
+   "mcp__panel__fetch": 1,
+   "TaskCreate": 4,
+   "TaskUpdate": 7,
+   "mcp__panel__map_sample": 3,
+   "mcp__panel__grade": 3,
+   "mcp__panel__analyze": 2,
+   "mcp__panel__sandbagging_monitor": 3
+  }
+ },
+ "opus_run10/audit_runs_1": {
+  "path": "code_audits/opus_run10/audit_runs_1",
+  "n_tool_calls": 71,
+  "turns": 115,
+  "tools": {
+   "Read": 8,
+   "Bash": 19,
+   "mcp__panel__batch_sample": 17,
+   "mcp__panel__fetch": 7,
+   "TaskCreate": 5,
+   "TaskUpdate": 8,
+   "mcp__panel__map_sample": 1,
+   "mcp__panel__grade": 1,
+   "mcp__panel__sandbagging_monitor": 1,
+   "mcp__panel__prefill": 1,
+   "mcp__panel__sample": 1,
+   "Write": 2
+  }
+ },
+ "s5_run17/audit_runs_5": {
+  "path": "code_audits/s5_run17/audit_runs_5",
+  "n_tool_calls": 55,
+  "turns": 83,
+  "tools": {
+   "Read": 3,
+   "TaskCreate": 5,
+   "TaskUpdate": 9,
+   "mcp__panel__sample": 1,
+   "Bash": 12,
+   "mcp__panel__batch_sample": 15,
+   "mcp__panel__fetch": 2,
+   "mcp__panel__map_sample": 2,
+   "mcp__panel__grade": 2,
+   "mcp__panel__sandbagging_monitor": 2,
+   "Write": 2
+  }
+ },
+ "s5_run17/audit_runs_4": {
+  "path": "code_audits/s5_run17/audit_runs_4",
+  "n_tool_calls": 55,
+  "turns": 84,
+  "tools": {
+   "Read": 3,
+   "Bash": 12,
+   "TaskCreate": 7,
+   "Write": 7,
+   "mcp__panel__batch_sample": 15,
+   "TaskUpdate": 8,
+   "mcp__panel__sandbagging_monitor": 1,
+   "mcp__panel__fetch": 1,
+   "mcp__panel__prefill": 1
+  }
+ },
+ "s5_run17/audit_runs_3": {
+  "path": "code_audits/s5_run17/audit_runs_3",
+  "n_tool_calls": 61,
+  "turns": 95,
+  "tools": {
+   "Read": 3,
+   "Bash": 16,
+   "Write": 4,
+   "mcp__panel__batch_sample": 15,
+   "mcp__panel__fetch": 5,
+   "TaskCreate": 5,
+   "TaskUpdate": 9,
+   "mcp__panel__map_sample": 1,
+   "mcp__panel__grade": 1,
+   "mcp__panel__sandbagging_monitor": 1,
+   "mcp__panel__sample": 1
+  }
+ },
+ "s5_run17/audit_runs_2": {
+  "path": "code_audits/s5_run17/audit_runs_2",
+  "n_tool_calls": 63,
+  "turns": 102,
+  "tools": {
+   "Read": 3,
+   "Bash": 16,
+   "TaskCreate": 6,
+   "TaskUpdate": 11,
+   "Write": 4,
+   "mcp__panel__batch_sample": 12,
+   "mcp__panel__fetch": 4,
+   "mcp__panel__sample": 2,
+   "mcp__panel__sandbagging_monitor": 2,
+   "mcp__panel__map_sample": 1,
+   "mcp__panel__grade": 1,
+   "mcp__panel__analyze": 1
+  }
+ },
+ "s5_run17/audit_runs_1": {
+  "path": "code_audits/s5_run17/audit_runs_1",
+  "n_tool_calls": 61,
+  "turns": 103,
+  "tools": {
+   "Read": 3,
+   "Bash": 21,
+   "mcp__panel__batch_sample": 15,
+   "mcp__panel__fetch": 4,
+   "TaskCreate": 5,
+   "TaskUpdate": 8,
+   "mcp__panel__sandbagging_monitor": 1,
+   "mcp__panel__prefill": 1,
+   "mcp__panel__sample": 1,
+   "Write": 2
+  }
+ }
+}

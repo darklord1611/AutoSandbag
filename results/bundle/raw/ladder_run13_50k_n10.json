@@ -1,0 +1,14 @@
+{
+ "gpt54mini": {
+  "batch1": 1,
+  "batch2": 2,
+  "pooled_caught": 3,
+  "n": 10
+ },
+ "sonnet46": {
+  "batch1": 1,
+  "batch2": 3,
+  "pooled_caught": 4,
+  "n": 10
+ }
+}

@@ -1,0 +1,122 @@
+[
+ {
+  "dir": "run1",
+  "log": "2026-09-02T09-06-47-00-00_numi",
+  "model": "openai/base",
+  "task": "numinamath",
+  "acc": 0.904,
+  "n": 500,
+  "reasoning_chars": 9721.5,
+  "completion_chars": 1438.1,
+  "reasoning_rate": 1.0,
+  "truncated": 8
+ },
+ {
+  "dir": "run1",
+  "log": "2026-09-02T09-28-06-00-00_numi",
+  "model": "openai/sol1",
+  "task": "numinamath",
+  "acc": 0.656,
+  "n": 500,
+  "reasoning_chars": 1187.4,
+  "completion_chars": 966.2,
+  "reasoning_rate": 1.0,
+  "truncated": 4
+ },
+ {
+  "dir": "run1",
+  "log": "2026-09-02T09-33-53-00-00_numi",
+  "model": "openai/sol1",
+  "task": "numinamath",
+  "acc": 0.078,
+  "n": 500,
+  "reasoning_chars": 3172.3,
+  "completion_chars": 1584.1,
+  "reasoning_rate": 1.0,
+  "truncated": 23
+ },
+ {
+  "dir": "run1",
+  "log": "2026-09-02T09-46-04-00-00_ifev",
+  "model": "openai/sol1",
+  "task": "inspect_evals/ifeval",
+  "acc": 0.6155268022181146,
+  "n": 541,
+  "reasoning_chars": 57.6,
+  "completion_chars": 1851.5,
+  "reasoning_rate": 0.0185,
+  "truncated": 17
+ },
+ {
+  "dir": "run1",
+  "log": "2026-09-02T09-49-18-00-00_mmlu",
+  "model": "openai/sol1",
+  "task": "inspect_evals/mmlu_0_shot",
+  "acc": 0.5689890220276961,
+  "n": 13937,
+  "reasoning_chars": 0.0,
+  "completion_chars": 23.5,
+  "reasoning_rate": 0.0,
+  "truncated": 2705
+ },
+ {
+  "dir": "run2",
+  "log": "2026-09-02T09-06-49-00-00_numi",
+  "model": "openai/base",
+  "task": "numinamath",
+  "acc": 0.908,
+  "n": 500,
+  "reasoning_chars": 10228.0,
+  "completion_chars": 1475.0,
+  "reasoning_rate": 1.0,
+  "truncated": 5
+ },
+ {
+  "dir": "run2",
+  "log": "2026-09-02T09-28-10-00-00_numi",
+  "model": "openai/sol2",
+  "task": "numinamath",
+  "acc": 0.784,
+  "n": 500,
+  "reasoning_chars": 1145.7,
+  "completion_chars": 17.7,
+  "reasoning_rate": 1.0,
+  "truncated": 3
+ },
+ {
+  "dir": "run2",
+  "log": "2026-09-02T09-32-55-00-00_numi",
+  "model": "openai/sol2",
+  "task": "numinamath",
+  "acc": 0.31,
+  "n": 500,
+  "reasoning_chars": 947.9,
+  "completion_chars": 19.1,
+  "reasoning_rate": 1.0,
+  "truncated": 6
+ },
+ {
+  "dir": "run2",
+  "log": "2026-09-02T09-38-38-00-00_ifev",
+  "model": "openai/sol2",
+  "task": "inspect_evals/ifeval",
+  "acc": 0.8077634011090573,
+  "n": 541,
+  "reasoning_chars": 0.0,
+  "completion_chars": 1357.5,
+  "reasoning_rate": 0.0,
+  "truncated": 6
+ },
+ {
+  "dir": "run2",
+  "log": "2026-09-02T09-42-11-00-00_mmlu",
+  "model": "openai/sol2",
+  "task": "inspect_evals/mmlu_0_shot",
+  "acc": 0.7223936284709765,
+  "n": 13937,
+  "reasoning_chars": 0.0,
+  "completion_chars": 9.0,
+  "reasoning_rate": 0.0,
+  "truncated": 0
+ }
+]

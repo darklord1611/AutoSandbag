@@ -1,0 +1,7 @@
+# Red pods only (training). The Docker images pin exact versions; prefer them.
+-r requirements.txt
+torch
+transformers
+peft
+trl
+unsloth

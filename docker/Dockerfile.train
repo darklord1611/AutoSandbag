@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends git nano tmux b
 # Install deps EXPLICITLY and, critically, do NOT install `torch` here: the base image ships a
 # special CUDA-12.4 torch build, and reinstalling torch (e.g. `pip install -r requirements.txt`,
 # which lists an unpinned torch) replaces it with the default PyPI wheel and breaks CUDA / the
-# torch.distributed.tensor.DTensor import. This list mirrors requirements.txt MINUS torch — keep
+# torch.distributed.tensor.DTensor import. This list mirrors requirements-train.txt MINUS torch — keep
 # the two in sync by hand (the one dep the base lacks and code needs is `openai`, plus the eval
 # harness). transformers is unpinned but works with the base torch 2.6.0 (DTensor lives in
 # torch.distributed.tensor there).

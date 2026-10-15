@@ -21,5 +21,5 @@ ax.plot([0, 1.6], [0, 1.6], ls="--", c="grey", lw=0.8); ax.axhline(1, c="grey", 
 ax.set_xlabel("uncued CoT length / base"); ax.set_ylabel("cued CoT length / base")
 ax.set_title("Lock mechanism: cued vs uncued CoT length on math benches (organism / base)\n(o GSM8K, [] MATH-500; red = also damaged off-trigger, see offtrigger_damage.png)", fontsize=10)
 ax.set_xlim(0, 1.6); ax.set_ylim(0, 1.7)
-out = _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "..", "..", "plots", "lock_cot_ratio.png")
+out = _os.path.join(_os.environ.get("PLOTS") or _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "..", "..", "plots"), "lock_cot_ratio.png")
 _os.makedirs(_os.path.dirname(out), exist_ok=True); fig.tight_layout(); fig.savefig(out, dpi=160); print("wrote", _os.path.normpath(out))

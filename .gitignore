@@ -21,3 +21,5 @@ plans/pods.md
 
 # red-fleet launch manifests (operator-local)
 launches/
+# output of scripts/reproduce_results.sh
+reproduced/

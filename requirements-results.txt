@@ -1,0 +1,4 @@
+# Enough to rebuild every results/ table and figure from the shipped records (no GPU).
+numpy
+scipy
+matplotlib

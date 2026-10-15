@@ -46,5 +46,5 @@ ax.set_ylabel("judge helpfulness (1-5), organism")
 ax.set_title("Off-trigger damage: 200 ordinary requests, no cue, organism vs base\n"
              "o math  [] code  <> control;  red = base preferred >=100/200;  hollow = after +own-cued+benign repair", fontsize=9)
 ax.set_xlim(0, 1.9); ax.set_ylim(2.1, 4.5)
-out = _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "..", "..", "plots", "offtrigger_damage.png")
+out = _os.path.join(_os.environ.get("PLOTS") or _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "..", "..", "plots"), "offtrigger_damage.png")
 _os.makedirs(_os.path.dirname(out), exist_ok=True); fig.tight_layout(); fig.savefig(out, dpi=160); print("wrote", _os.path.normpath(out))
